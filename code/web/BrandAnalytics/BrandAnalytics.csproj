@@ -58,6 +58,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ServiceActivities\EmployeeService\GetEmployeeStudies.cs" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -65,6 +66,8 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
+    <Compile Include="Common\ErrorMessages.cs" />
+    <Compile Include="Common\GetEmployeeActivity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -80,6 +83,22 @@
     <Content Include="BrandAnalyticsService.Employees.xamlx">
       <SubType>Designer</SubType>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <XamlAppDef Include="ServiceActivities\EmployeeService\GetPendingStudiesActivity.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </XamlAppDef>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="BrandAnalytics.Database\BrandAnalytics.Database.csproj">
+      <Project>{1197f212-6834-4965-96b9-a78221350bb6}</Project>
+      <Name>BrandAnalytics.Database</Name>
+    </ProjectReference>
+    <ProjectReference Include="BrandAnalytics.Data\BrandAnalytics.Data.csproj">
+      <Project>{f6699704-5ff4-4900-80fd-978219884ebc}</Project>
+      <Name>BrandAnalytics.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
