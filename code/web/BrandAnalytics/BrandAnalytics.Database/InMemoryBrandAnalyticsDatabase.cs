@@ -63,6 +63,10 @@ namespace BrandAnalytics.Database
                 {
                     ClientId = 1, CurrentState = TwitterStudyStates.Canceled, Duration = TimeSpan.FromDays(2),EmployeeId = 80,Id = 1,Topics = new[]{"wp","wpdev"}
                 }, 
+                new TwitterStudy
+                {
+                    ClientId = 1, CurrentState = TwitterStudyStates.Pending, EmployeeId = 80,Id = 2
+                }, 
             });
         }
     }

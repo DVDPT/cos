@@ -11,6 +11,7 @@ namespace BrandAnalytics.Data
         Pending,
         Started,
         Completed,
+        Revision,
         Canceled
 
     }
