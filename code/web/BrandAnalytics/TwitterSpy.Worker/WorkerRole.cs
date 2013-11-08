@@ -28,7 +28,13 @@ namespace TwitterSpy.Worker
     public class WorkerRole : RoleEntryPoint
     {
 
-        private readonly List<TwitterSpyStudyData> _onGoingStudies = new List<TwitterSpyStudyData>();
+        private class OnGoingStudy
+        {
+            public Timer Timer { get; set; }
+            public TwitterSpyStudyData Data { get; set; }
+        }
+
+        private readonly List<OnGoingStudy> _onGoingStudies = new List<OnGoingStudy>();
 
         // The name of your queue
 
@@ -39,7 +45,7 @@ namespace TwitterSpy.Worker
         private IFilteredStream _stream;
         private int _poolingWaitTime;
         private bool _isStreamStarted;
-
+        private Task _streamTask;
         public override void Run()
         {
 
@@ -85,7 +91,7 @@ namespace TwitterSpy.Worker
 
                 var reportData = StartStudy(study);
 
-                StartTwitterStreamIfNeed();
+                StartTwitterStream();
 
                 lock (_onGoingStudies)
                 {
@@ -94,11 +100,10 @@ namespace TwitterSpy.Worker
 
                 await _queue.DeleteMessageAsync(message);
 
-            } while (_cts.IsCancellationRequested);
+            } while (_cts.IsCancellationRequested == false);
         }
 
-        private Timer t;
-        private TwitterSpyStudyData StartStudy(TwitterStudy study)
+        private OnGoingStudy StartStudy(TwitterStudy study)
         {
             var reportData = new TwitterSpyStudyData(study);
 
@@ -109,10 +114,10 @@ namespace TwitterSpy.Worker
                 _stream.AddTrack(topic, reportData.ProcessTweet);
             }
 
-            
+            var onGoingStudy = new OnGoingStudy { Data = reportData };
 
             // the object is stored so that the timer isn't garbage collected
-            t = new Timer(o =>
+            var timer = new Timer(o =>
             {
                 var data = (TwitterSpyStudyData)o;
 
@@ -122,10 +127,10 @@ namespace TwitterSpy.Worker
                 //
                 lock (_onGoingStudies)
                 {
-                    _onGoingStudies.Remove(data);
+                    _onGoingStudies.Remove(onGoingStudy);
                 }
 
-                CheckIfStreamNeedsToBeSuspended();
+                CheckIfStreamNeedsToBeStopped();
 
                 //
                 //  Remove topics
@@ -142,51 +147,78 @@ namespace TwitterSpy.Worker
                 //
                 _reportQueue.AddMessage(new CloudQueueMessage(JsonConvert.SerializeObject(report)));
 
-               
+
 
             },
             reportData,
             study.Duration,
             TimeSpan.FromTicks(-1));
 
-            return reportData;
+            onGoingStudy.Timer = timer;
+
+            return onGoingStudy;
 
         }
 
-        private void CheckIfStreamNeedsToBeSuspended()
+        private void CheckIfStreamNeedsToBeStopped()
         {
-            if (_onGoingStudies.Count != 0) 
-                return;
-
-            _stream.PauseStream();
+            if (_onGoingStudies.Count != 0)
+                _stream.StopStream();
         }
 
 
-        private void StartTwitterStreamIfNeed()
+        private void StartTwitterStream()
         {
 
             if (_isStreamStarted)
             {
-                if (_onGoingStudies.Count != 0)
-                    _stream.ResumeStream();
+                _stream.StopStream();
+            }
+            else
+            {
+                _stream.StreamStarted += (s, a) => Trace.WriteLine("Stream has started!");
 
-                return;
+                _stream.LimitReached += (sender, args) => Trace.WriteLine(string.Format("You have missed {0} tweets because you were retrieving more than 1% of tweets", args.Value));
+
             }
 
-            
-
-            _stream.StreamStarted += (s, a) => Trace.WriteLine("Stream has started!");
-
-            _stream.LimitReached += (sender, args) => Trace.WriteLine(string.Format("You have missed {0} tweets because you were retrieving more than 1% of tweets", args.Value));
 
             TwitterContext context = new TwitterContext();
 
-            if (!context.TryInvokeAction(() => _stream.StartStream(_token, tweet => Trace.Write("."))))
+            StartStream(context);
+
+
+        }
+
+        private void StartStream(TwitterContext context)
+        {
+            var stream = _streamTask;
+            if (stream != null)
             {
-                Trace.WriteLine(string.Format("An Exception occured : '{0}'", context.LastActionTwitterException.TwitterWebExceptionErrorDescription));
+                stream.Wait();
             }
 
-            _isStreamStarted = true;
+            _streamTask = Task.Factory.StartNew
+                (
+                    () =>
+                    {
+                        if (_isStreamStarted)
+                            return;
+
+                        if (_isStreamStarted)
+                            return;
+
+                        _isStreamStarted = true;
+                        if (!context.TryInvokeAction(() => _stream.StartStream(_token, tweet => Trace.Write("."))))
+                        {
+                            Trace.WriteLine(string.Format("An Exception occured : '{0}'",
+                                context.LastActionTwitterException.TwitterWebExceptionErrorDescription));
+                        }
+
+                        _isStreamStarted = false;
+                        _streamTask = null;
+                    }
+                    , TaskCreationOptions.LongRunning);
         }
 
         public override bool OnStart()

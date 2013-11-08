@@ -55,9 +55,13 @@ namespace BrandAnalytics.Service
                         continue;
                     }
 
-                    study.Report = report;
-                    study.CurrentState = TwitterStudyStates.Revision;
+                    if (study.CurrentState != TwitterStudyStates.Canceled)
+                    {
+                        study.Report = report;
+                        study.CurrentState = TwitterStudyStates.Revision;
+                    }
 
+                    await queue.DeleteMessageAsync(msg);
 
                 } while (true);
 
