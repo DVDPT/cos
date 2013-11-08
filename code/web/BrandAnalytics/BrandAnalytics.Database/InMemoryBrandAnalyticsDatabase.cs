@@ -22,7 +22,7 @@ namespace BrandAnalytics.Database
         {
             _clients = new InMemoryEntityMapper<int, Client>(c => c.Id);
             _employees = new InMemoryEntityMapper<int, Employee>(c => c.Id);
-            _studies = new InMemoryEntityMapper<int, TwitterStudy>(c => c.Id);
+            _studies = new InMemoryEntityMapper<int, TwitterStudy>(c => _studies.GetAll().Count());
             FillWithData();
         }
 

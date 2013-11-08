@@ -22,6 +22,7 @@ namespace BrandAnalytics.Data
         public int Id { get; set; }
         public int ClientId { get; set; }
         public int EmployeeId { get; set; }
+        public string Brand { get; set; }
         public TimeSpan Duration { get; set; }
         public string[] Topics { get; set; }
         public TwitterStudyStates CurrentState { get; set; }
