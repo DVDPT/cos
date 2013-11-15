@@ -42,7 +42,6 @@ namespace BrandAnalytics.Service
                         await Task.Delay(TimeToDelay);
                         continue;
                     }
-
                     var report = JsonConvert.DeserializeObject<TwitterStudyReport>(msg.AsString);
 
                     var study = BrandAnalyticsDatabaseFactory.Instance.Studies.GetAll()
