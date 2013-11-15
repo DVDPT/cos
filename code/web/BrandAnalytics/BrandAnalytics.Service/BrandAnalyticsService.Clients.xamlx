@@ -159,12 +159,8 @@
       </p1:Sequence>
       <p1:Sequence sap2010:WorkflowViewState.IdRef="Sequence_4">
         <p1:Sequence.Variables>
-          <p1:Variable x:TypeArguments="x:Int32" Name="ClientId">
-            <p1:Variable.Default>
-              <mca:CSharpValue x:TypeArguments="x:Int32">StudyId</mca:CSharpValue>
-            </p1:Variable.Default>
-          </p1:Variable>
-          <p1:Variable x:TypeArguments="bd:TwitterStudyReport[][]" Name="Studies" />
+          <p1:Variable x:TypeArguments="x:Int32" Name="ClientId" />
+          <p1:Variable x:TypeArguments="bd:TwitterStudyReport[]" Name="Studies" />
         </p1:Sequence.Variables>
         <Receive x:Name="__ReferenceID2" CanCreateInstance="True" DisplayName="ReceiveRequest" sap2010:WorkflowViewState.IdRef="Receive_3" OperationName="GetCompletedStudies" ServiceContractName="p:IService">
           <Receive.CorrelationInitializers>
@@ -182,7 +178,18 @@
             </p1:OutArgument>
           </ReceiveParametersContent>
         </Receive>
-        <bssc:CancelStudyActivity StudyId="{x:Null}" DisplayName="GetCompletedStudiesActivity" sap2010:WorkflowViewState.IdRef="CancelStudyActivity_2" />
+        <bssc:GetCompletedStudiesActivity sap2010:WorkflowViewState.IdRef="GetCompletedStudiesActivity_1">
+          <bssc:GetCompletedStudiesActivity.ClientId>
+            <p1:InArgument x:TypeArguments="x:Int32">
+              <mca:CSharpValue x:TypeArguments="x:Int32">ClientId</mca:CSharpValue>
+            </p1:InArgument>
+          </bssc:GetCompletedStudiesActivity.ClientId>
+          <bssc:GetCompletedStudiesActivity.Reports>
+            <p1:OutArgument x:TypeArguments="bd:TwitterStudyReport[]">
+              <mca:CSharpReference x:TypeArguments="bd:TwitterStudyReport[]">Studies</mca:CSharpReference>
+            </p1:OutArgument>
+          </bssc:GetCompletedStudiesActivity.Reports>
+        </bssc:GetCompletedStudiesActivity>
         <SendReply Request="{x:Reference __ReferenceID2}" DisplayName="SendResponse" sap2010:WorkflowViewState.IdRef="SendReply_3">
           <SendParametersContent>
             <p1:InArgument x:TypeArguments="bd:TwitterStudyReport[]" x:Key="Studies">
@@ -192,7 +199,7 @@
         </SendReply>
       </p1:Sequence>
     </p1:Parallel>
-    <sads:DebugSymbol.Symbol>d2lEOlxSbnVuZXNcSVNFTFxDT1NcY29zXGNvZGVcd2ViXEJyYW5kQW5hbHl0aWNzXEJyYW5kQW5hbHl0aWNzLlNlcnZpY2VcQnJhbmRBbmFseXRpY3NTZXJ2aWNlLkNsaWVudHMueGFtbHgdDwPEAREBAUwFwgETAQJNB34VATV/B58BFQEfoAEHwQEVAQNTCWUTAVZmCXYlAUZ3CX0VATaDAQ+DAVMBIIcBCZYBEwEulwEJlwFwAS2YAQmeARUBI6QBD6QBUwEEqQEJuAETARa5AQm5AZoBARW6AQnAARUBCF8PX1wBYWIPYloBXFgTWGABV24PblQBUWkPaVIBTHMPc1sBR3oPelMBN4wBE4wBYAEykwEPkwFbAS+bAQ+bAVMBJLUBD7UBXAEbrgETrgFgARe9AQ+9AWMBEQ==</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d2lEOlxSbnVuZXNcSVNFTFxDT1NcY29zXGNvZGVcd2ViXEJyYW5kQW5hbHl0aWNzXEJyYW5kQW5hbHl0aWNzLlNlcnZpY2VcQnJhbmRBbmFseXRpY3NTZXJ2aWNlLkNsaWVudHMueGFtbHgeDwPLAREBAUwFyQETAQJNB34VATl/B58BFQEjoAEHyAEVAQNTCWUTAVpmCXYlAUp3CX0VATqDAQ+DAVMBJIcBCZYBEwEylwEJlwFwATGYAQmeARUBJ6UBCbQBEwEatQEJwAEsARHBAQnHARUBBF8PX1wBZWIPYloBYFgTWGABW24PblQBVWkPaVIBUHMPc1sBS3oPelMBO4wBE4wBYAE2kwEPkwFbATObAQ+bAVMBKLEBD7EBXAEfqgETqgFgARu4AQ+4AVQBFr0BD70BawESxAEPxAFjAQ0=</sads:DebugSymbol.Symbol>
   </p1:Sequence>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
@@ -217,7 +224,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
       <sap2010:ViewStateData Id="Receive_3" sap:VirtualizedContainerService.HintSize="254.4,88" />
-      <sap2010:ViewStateData Id="CancelStudyActivity_2" sap:VirtualizedContainerService.HintSize="254.4,22.4" />
+      <sap2010:ViewStateData Id="GetCompletedStudiesActivity_1" sap:VirtualizedContainerService.HintSize="254.4,22.4" />
       <sap2010:ViewStateData Id="SendReply_3" sap:VirtualizedContainerService.HintSize="254.4,88" />
       <sap2010:ViewStateData Id="Sequence_4" sap:VirtualizedContainerService.HintSize="276.8,403.2">
         <sap:WorkflowViewStateService.ViewState>

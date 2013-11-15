@@ -98,6 +98,8 @@
     <Compile Include="Common\GetClientActivity.cs" />
     <Compile Include="Common\GetEmployeeActivity.cs" />
     <Compile Include="Common\GetStudyActivity.cs" />
+    <Compile Include="Common\SendNotificationActivity.cs" />
+    <Compile Include="Common\SetStudyStateActivity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServiceActivities\ClientService\CancelStudyActivity.cs" />
     <Compile Include="ServiceActivities\ClientService\GetCompletedStudiesActivity.cs" />
@@ -152,6 +154,12 @@
   </ItemGroup>
   <ItemGroup>
     <XamlAppDef Include="ServiceActivities\EmployeeService\StartStudyActivity.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </XamlAppDef>
+  </ItemGroup>
+  <ItemGroup>
+    <XamlAppDef Include="ServiceActivities\EmployeeService\SetStudyAsCompletedActivity.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </XamlAppDef>
