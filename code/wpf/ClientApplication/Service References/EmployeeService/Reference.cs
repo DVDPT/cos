@@ -301,6 +301,13 @@ namespace ClientApplication.EmployeeService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/StartStudy", ReplyAction="http://tempuri.org/IService/StartStudyResponse")]
         System.Threading.Tasks.Task<ClientApplication.EmployeeService.StartStudyResponse> StartStudyAsync(ClientApplication.EmployeeService.StartStudyRequest request);
+        
+        // CODEGEN: Generating message contract since the operation SetStudyAsCompleted is neither RPC nor document wrapped.
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SetStudyAsCompleted", ReplyAction="http://tempuri.org/IService/SetStudyAsCompletedResponse")]
+        ClientApplication.EmployeeService.SetStudyAsCompletedResponse SetStudyAsCompleted(ClientApplication.EmployeeService.SetStudyAsCompletedRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SetStudyAsCompleted", ReplyAction="http://tempuri.org/IService/SetStudyAsCompletedResponse")]
+        System.Threading.Tasks.Task<ClientApplication.EmployeeService.SetStudyAsCompletedResponse> SetStudyAsCompletedAsync(ClientApplication.EmployeeService.SetStudyAsCompletedRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -339,6 +346,33 @@ namespace ClientApplication.EmployeeService {
     public partial class StartStudyResponse {
         
         public StartStudyResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SetStudyAsCompleted", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class SetStudyAsCompletedRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public int studyId;
+        
+        public SetStudyAsCompletedRequest() {
+        }
+        
+        public SetStudyAsCompletedRequest(int studyId) {
+            this.studyId = studyId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class SetStudyAsCompletedResponse {
+        
+        public SetStudyAsCompletedResponse() {
         }
     }
     
@@ -403,6 +437,28 @@ namespace ClientApplication.EmployeeService {
             inValue.duration = duration;
             inValue.employeeId = employeeId;
             return ((ClientApplication.EmployeeService.IService)(this)).StartStudyAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ClientApplication.EmployeeService.SetStudyAsCompletedResponse ClientApplication.EmployeeService.IService.SetStudyAsCompleted(ClientApplication.EmployeeService.SetStudyAsCompletedRequest request) {
+            return base.Channel.SetStudyAsCompleted(request);
+        }
+        
+        public void SetStudyAsCompleted(int studyId) {
+            ClientApplication.EmployeeService.SetStudyAsCompletedRequest inValue = new ClientApplication.EmployeeService.SetStudyAsCompletedRequest();
+            inValue.studyId = studyId;
+            ClientApplication.EmployeeService.SetStudyAsCompletedResponse retVal = ((ClientApplication.EmployeeService.IService)(this)).SetStudyAsCompleted(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ClientApplication.EmployeeService.SetStudyAsCompletedResponse> ClientApplication.EmployeeService.IService.SetStudyAsCompletedAsync(ClientApplication.EmployeeService.SetStudyAsCompletedRequest request) {
+            return base.Channel.SetStudyAsCompletedAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ClientApplication.EmployeeService.SetStudyAsCompletedResponse> SetStudyAsCompletedAsync(int studyId) {
+            ClientApplication.EmployeeService.SetStudyAsCompletedRequest inValue = new ClientApplication.EmployeeService.SetStudyAsCompletedRequest();
+            inValue.studyId = studyId;
+            return ((ClientApplication.EmployeeService.IService)(this)).SetStudyAsCompletedAsync(inValue);
         }
     }
 }

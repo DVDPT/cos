@@ -27,6 +27,24 @@ namespace BrandAnalytics.Data
         public string[] Topics { get; set; }
         public TwitterStudyStates CurrentState { get; set; }
         public TwitterStudyReport Report { get; set; }
+
+        protected bool Equals(TwitterStudy other)
+        {
+            return Id == other.Id;
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (ReferenceEquals(null, obj)) return false;
+            if (ReferenceEquals(this, obj)) return true;
+            if (obj.GetType() != this.GetType()) return false;
+            return Equals((TwitterStudy) obj);
+        }
+
+        public override int GetHashCode()
+        {
+            return Id;
+        }
     }
 
     public class TwitterStudyReport

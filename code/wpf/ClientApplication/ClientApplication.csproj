@@ -68,6 +68,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Converter\NullToVisibilityConverter.cs" />
+    <Compile Include="Converter\RevisionToVisibilityConverter.cs" />
     <Compile Include="Model\ClientServiceClient.cs" />
     <Compile Include="Model\EmployeeService.cs" />
     <Compile Include="Service References\ClientService\Reference.cs">
@@ -127,7 +128,16 @@
     <None Include="Service References\ClientService\BrandAnalyticsService1.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\ClientService\BrandAnalyticsService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ClientService\BrandAnalyticsService21.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\ClientService\ClientApplication.ClientService.CancelStudyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ClientService\ClientApplication.ClientService.TwitterStudyReport.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\ClientService\Service1.wsdl" />
@@ -143,6 +153,9 @@
     </None>
     <None Include="Service References\EmployeeService\BrandAnalyticsService3.xsd">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EmployeeService\ClientApplication.EmployeeService.SetStudyAsCompletedResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\EmployeeService\ClientApplication.EmployeeService.StartStudyResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>

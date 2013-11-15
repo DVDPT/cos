@@ -9,7 +9,102 @@
 //------------------------------------------------------------------------------
 
 namespace ClientApplication.ClientService {
+    using System.Runtime.Serialization;
+    using System;
     
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="TwitterStudyReport", Namespace="http://schemas.datacontract.org/2004/07/BrandAnalytics.Data")]
+    [System.SerializableAttribute()]
+    public partial class TwitterStudyReport : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string[] FrequentTermsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int NrOfAuthorsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int NrOfTweetsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int StudyidField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string[] FrequentTerms {
+            get {
+                return this.FrequentTermsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FrequentTermsField, value) != true)) {
+                    this.FrequentTermsField = value;
+                    this.RaisePropertyChanged("FrequentTerms");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int NrOfAuthors {
+            get {
+                return this.NrOfAuthorsField;
+            }
+            set {
+                if ((this.NrOfAuthorsField.Equals(value) != true)) {
+                    this.NrOfAuthorsField = value;
+                    this.RaisePropertyChanged("NrOfAuthors");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int NrOfTweets {
+            get {
+                return this.NrOfTweetsField;
+            }
+            set {
+                if ((this.NrOfTweetsField.Equals(value) != true)) {
+                    this.NrOfTweetsField = value;
+                    this.RaisePropertyChanged("NrOfTweets");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Studyid {
+            get {
+                return this.StudyidField;
+            }
+            set {
+                if ((this.StudyidField.Equals(value) != true)) {
+                    this.StudyidField = value;
+                    this.RaisePropertyChanged("Studyid");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ClientService.IService")]
@@ -29,6 +124,14 @@ namespace ClientApplication.ClientService {
         // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/CancelStudy", ReplyAction="http://tempuri.org/IService/CancelStudyResponse")]
         System.Threading.Tasks.Task<ClientApplication.ClientService.CancelStudyResponse> CancelStudyAsync(ClientApplication.ClientService.CancelStudyRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetCompletedStudies", ReplyAction="http://tempuri.org/IService/GetCompletedStudiesResponse")]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="Studies")]
+        ClientApplication.ClientService.TwitterStudyReport[] GetCompletedStudies(int ClientId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetCompletedStudies", ReplyAction="http://tempuri.org/IService/GetCompletedStudiesResponse")]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="Studies")]
+        System.Threading.Tasks.Task<ClientApplication.ClientService.TwitterStudyReport[]> GetCompletedStudiesAsync(int ClientId);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -112,6 +215,14 @@ namespace ClientApplication.ClientService {
         
         public System.Threading.Tasks.Task<ClientApplication.ClientService.CancelStudyResponse> CancelStudyAsync(ClientApplication.ClientService.CancelStudyRequest request) {
             return base.Channel.CancelStudyAsync(request);
+        }
+        
+        public ClientApplication.ClientService.TwitterStudyReport[] GetCompletedStudies(int ClientId) {
+            return base.Channel.GetCompletedStudies(ClientId);
+        }
+        
+        public System.Threading.Tasks.Task<ClientApplication.ClientService.TwitterStudyReport[]> GetCompletedStudiesAsync(int ClientId) {
+            return base.Channel.GetCompletedStudiesAsync(ClientId);
         }
     }
 }

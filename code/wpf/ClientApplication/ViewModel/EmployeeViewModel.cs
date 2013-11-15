@@ -181,11 +181,14 @@ namespace ClientApplication.ViewModel
             _service = service;
             GetEmployeeDetailsCommand = new RelayCommand(() => LoadEmployeeData());
             StartStudyCommand = new RelayCommand(StartStudy);
+            CompleteStudyCommand = new RelayCommand(CompleteStudy);
         }
 
+       
 
         public ICommand GetEmployeeDetailsCommand { get; set; }
         public ICommand StartStudyCommand { get; set; }
+        public ICommand CompleteStudyCommand { get; set; }
         private async Task LoadEmployeeData()
         {
             StartOperation("Getting employee studies");
@@ -248,5 +251,25 @@ namespace ClientApplication.ViewModel
                 Time = TimeSpan.FromMinutes(1);
             }
         }
+
+        private async void CompleteStudy()
+        {
+            if (CurrentStudy.CurrentState == TwitterStudyStates.Completed)
+            {
+                return;
+            }
+
+            try
+            {
+                await _service.SetStudyAsCompletedAsync(new SetStudyAsCompletedRequest(CurrentStudy.Id));
+                await LoadEmployeeData();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+            }
+           
+        }
+
     }
 }

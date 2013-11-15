@@ -1,4 +1,10 @@
+using System;
+using System.Windows;
+using System.Windows.Input;
+using ClientApplication.ClientService;
+using ClientApplication.Model;
 using GalaSoft.MvvmLight;
+using GalaSoft.MvvmLight.Command;
 
 namespace ClientApplication.ViewModel
 {
@@ -16,6 +22,8 @@ namespace ClientApplication.ViewModel
     /// </summary>
     public class ClientViewModel : AppViewModelBase
     {
+        private readonly IClientService _service;
+
         /// <summary>
         /// The <see cref="ClientId" /> property's name.
         /// </summary>
@@ -48,18 +56,148 @@ namespace ClientApplication.ViewModel
         }
 
         /// <summary>
-        /// Initializes a new instance of the ClientViewModel class.
+        /// The <see cref="Brand" /> property's name.
         /// </summary>
-        public ClientViewModel()
+        public const string BrandPropertyName = "Brand";
+
+        private string _brand = string.Empty;
+
+        /// <summary>
+        /// Sets and gets the Brand property.
+        /// Changes to that property's value raise the PropertyChanged event. 
+        /// </summary>
+        public string Brand
         {
-            ////if (IsInDesignMode)
-            ////{
-            ////    // Code runs in Blend --> create design time data.
-            ////}
-            ////else
-            ////{
-            ////    // Code runs "for real"
-            ////}
+            get
+            {
+                return _brand;
+            }
+
+            set
+            {
+                if (_brand == value)
+                {
+                    return;
+                }
+
+                RaisePropertyChanging(BrandPropertyName);
+                _brand = value;
+                RaisePropertyChanged(BrandPropertyName);
+            }
         }
+
+        /// <summary>
+        /// The <see cref="StudyId" /> property's name.
+        /// </summary>
+        public const string StudyIdPropertyName = "StudyId";
+
+        private int _studyId = 0;
+
+        /// <summary>
+        /// Sets and gets the StudyId property.
+        /// Changes to that property's value raise the PropertyChanged event. 
+        /// </summary>
+        public int StudyId
+        {
+            get
+            {
+                return _studyId;
+            }
+
+            set
+            {
+                if (_studyId == value)
+                {
+                    return;
+                }
+
+                RaisePropertyChanging(StudyIdPropertyName);
+                _studyId = value;
+                RaisePropertyChanged(StudyIdPropertyName);
+            }
+        }
+
+        /// <summary>
+        /// The <see cref="CompletedReports" /> property's name.
+        /// </summary>
+        public const string CompletedReportsPropertyName = "CompletedReports";
+
+        private TwitterStudyReport[] _reports;
+
+        /// <summary>
+        /// Sets and gets the CompletedReports property.
+        /// Changes to that property's value raise the PropertyChanged event. 
+        /// </summary>
+        public TwitterStudyReport[] CompletedReports
+        {
+            get
+            {
+                return _reports;
+            }
+
+            set
+            {
+                if (_reports == value)
+                {
+                    return;
+                }
+
+                RaisePropertyChanging(CompletedReportsPropertyName);
+                _reports = value;
+                RaisePropertyChanged(CompletedReportsPropertyName);
+            }
+        }
+
+        public ClientViewModel(IClientService service)
+        {
+            _service = service;
+            GetCompletedServicesCommand = new RelayCommand(GetCompletedServicesCommandImpl);
+            CancelStudyCommand = new RelayCommand(CancelStudyCommandImpl);
+            StartStudyCommand = new RelayCommand(StartStudyCommandImpl);
+        }
+
+        private async void CancelStudyCommandImpl()
+        {
+            try
+            {
+
+                await _service.CancelStudyAsync(new CancelStudyRequest(StudyId));
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+            }
+        }
+
+        private async void StartStudyCommandImpl()
+        {
+            try
+            {
+                await _service.RequestStudyAsync(ClientId, Brand);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+            }
+        }
+
+        private async void GetCompletedServicesCommandImpl()
+        {
+            try
+            {
+
+                CompletedReports = await _service.GetCompletedStudiesAsync(ClientId);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+            }
+        }
+
+        public ICommand GetCompletedServicesCommand { get; set; }
+        public ICommand StartStudyCommand { get; set; }
+        public ICommand CancelStudyCommand { get; set; }
+
+       
     }
 }

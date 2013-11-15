@@ -4,6 +4,8 @@
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import schemaLocation="http://127.0.0.1/BrandAnalyticsService.Clients.xamlx?xsd=xsd0" namespace="http://tempuri.org/" />
       <xsd:import schemaLocation="http://127.0.0.1/BrandAnalyticsService.Clients.xamlx?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://127.0.0.1/BrandAnalyticsService.Clients.xamlx?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/BrandAnalytics.Data" />
+      <xsd:import schemaLocation="http://127.0.0.1/BrandAnalyticsService.Clients.xamlx?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IService_RequestStudy_InputMessage">
@@ -18,6 +20,12 @@
   <wsdl:message name="IService_CancelStudy_OutputMessage">
     <wsdl:part name="parameters" element="tns:CancelStudyResponse" />
   </wsdl:message>
+  <wsdl:message name="IService_GetCompletedStudies_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompletedStudies" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetCompletedStudies_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompletedStudiesResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService">
     <wsdl:operation name="RequestStudy">
       <wsdl:input wsaw:Action="http://tempuri.org/IService/RequestStudy" message="tns:IService_RequestStudy_InputMessage" />
@@ -26,6 +34,10 @@
     <wsdl:operation name="CancelStudy">
       <wsdl:input wsaw:Action="http://tempuri.org/IService/CancelStudy" message="tns:IService_CancelStudy_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService/CancelStudyResponse" message="tns:IService_CancelStudy_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompletedStudies">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetCompletedStudies" message="tns:IService_GetCompletedStudies_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetCompletedStudiesResponse" message="tns:IService_GetCompletedStudies_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService" type="tns:IService">
@@ -41,6 +53,15 @@
     </wsdl:operation>
     <wsdl:operation name="CancelStudy">
       <soap:operation soapAction="http://tempuri.org/IService/CancelStudy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompletedStudies">
+      <soap:operation soapAction="http://tempuri.org/IService/GetCompletedStudies" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

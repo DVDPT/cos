@@ -23,7 +23,7 @@ namespace BrandAnalytics.Database.Mappers
 
         public TKey Add(TEntity obj)
         {
-            Add(obj);
+            base.Add(obj);
             return _entityKeyExtractor(obj);
         }
 
