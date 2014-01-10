@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<org.pi4soa.cdl:Package xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:org.pi4soa.cdl="http:///org/pi4soa/cdl.ecore" description="The choreography description for Client" name="Client" author="Diogo" version="0.1" targetNamespace="http://www.pi4soa.org/Client">
+  <typeDefinitions>
+    <nameSpaces description="Target Namespace for Client" prefix="tns" uRI="http://www.pi4soa.org/Client"/>
+    <nameSpaces description="XML Schema Namespace" prefix="xsd" uRI="http://www.w3.org/2001/XMLSchema"/>
+    <informationTypes name="URIType" typeName="xsd:anyURI"/>
+    <tokens name="URIToken" informationType="//@typeDefinitions/@informationTypes.0"/>
+  </typeDefinitions>
+  <choreographies description="Choreography flow for the Client process" name="ClientProcess" root="true"/>
+</org.pi4soa.cdl:Package>
