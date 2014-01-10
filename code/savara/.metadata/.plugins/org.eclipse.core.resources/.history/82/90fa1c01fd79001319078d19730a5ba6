@@ -9,24 +9,15 @@
     <informationTypes description="This is the information type CancelStudyResponse" name="CancelStudyResponse" elementName="cs:CancelStudyResponse"/>
     <informationTypes description="This is the information type GetCompletedStudies" name="GetCompletedStudies" elementName="cs:GetCompletedStudies"/>
     <informationTypes description="This is the information type GetCompletedStudiesResponse" name="GetCompletedStudiesResponse" elementName="cs:GetCompletedStudiesResponse"/>
-    <informationTypes description="This is the information type GetPendingStudies" name="GetPendingStudies" elementName="cs:GetPendingStudies"/>
-    <informationTypes description="This is the information type GetPendingStudiesResponse" name="GetPendingStudiesResponse" elementName="cs:GetPendingStudiesResponse"/>
     <informationTypes description="This is the information type IDType" name="IDType" typeName="xsd:string"/>
     <informationTypes description="This is the information type RequestStudy" name="RequestStudy" elementName="cs:RequestStudy"/>
     <informationTypes description="This is the information type RequestStudyResponse" name="RequestStudyResponse" elementName="cs:RequestStudyResponse"/>
-    <informationTypes description="This is the information type SetStudyAsCompleted" name="SetStudyAsCompleted" elementName="cs:SetStudyAsCompleted"/>
-    <informationTypes description="This is the information type SetStudyAsCompletedResponse" name="SetStudyAsCompletedResponse" elementName="cs:SetStudyAsCompletedResponse"/>
-    <informationTypes description="This is the information type StartStudy" name="StartStudy" elementName="cs:StartStudy"/>
-    <informationTypes description="This is the information type StartStudyResponse" name="StartStudyResponse" elementName="cs:RequestStudyResponse"/>
     <informationTypes name="URIType" typeName="xsd:anyURI"/>
-    <tokens description="This is the token IDToken" name="IDToken" informationType="//@typeDefinitions/@informationTypes.6"/>
-    <tokens name="URIToken" informationType="//@typeDefinitions/@informationTypes.13"/>
+    <tokens description="This is the token IDToken" name="IDToken" informationType="//@typeDefinitions/@informationTypes.4"/>
+    <tokens name="URIToken" informationType="//@typeDefinitions/@informationTypes.7"/>
     <tokenLocators description="This is the token locator CancelStudyLocator" token="//@typeDefinitions/@tokens.0" informationType="//@typeDefinitions/@informationTypes.0" name="CancelStudyLocator"/>
     <tokenLocators description="This is the token locator GetCompletedStudiesLocator" token="//@typeDefinitions/@tokens.0" informationType="//@typeDefinitions/@informationTypes.2" name="GetCompletedStudiesLocator"/>
-    <tokenLocators description="This is the token locator GetPendingStudies" token="//@typeDefinitions/@tokens.0" informationType="//@typeDefinitions/@informationTypes.4" name="GetPendingStudies"/>
-    <tokenLocators description="This is the token locator RequestStudyLocator" token="//@typeDefinitions/@tokens.0" informationType="//@typeDefinitions/@informationTypes.7" name="RequestStudyLocator"/>
-    <tokenLocators description="This is the token locator SetStudyAsCompleted" token="//@typeDefinitions/@tokens.0" informationType="//@typeDefinitions/@informationTypes.9" name="SetStudyAsCompleted"/>
-    <tokenLocators description="This is the token locator StartStudyLocator" token="//@typeDefinitions/@tokens.0" informationType="//@typeDefinitions/@informationTypes.11" name="StartStudyLocator"/>
+    <tokenLocators description="This is the token locator RequestStudyLocator" token="//@typeDefinitions/@tokens.0" informationType="//@typeDefinitions/@informationTypes.5" name="RequestStudyLocator"/>
     <roleTypes description="This is the role type BrandAnalytics" name="BrandAnalytics">
       <behaviors description="This is the behavior BrandAnalyticsBehavior" name="BrandAnalyticsBehavior"/>
     </roleTypes>
@@ -47,26 +38,13 @@
   </typeDefinitions>
   <choreographies description="Choreography flow for the Client process" name="BrandAnalyticsService.Clients" root="true">
     <variableDefinitions description="Channel to facilitate interaction to BrandAnalytics" name="BrandAnalyticsChannel" type="//@typeDefinitions/@channelTypes.1"/>
-    <variableDefinitions description="Channel to facilitate interaction to Employee" name="EmployeeChannel" type="//@typeDefinitions/@channelTypes.2"/>
     <finalizers/>
     <activities xsi:type="org.pi4soa.cdl:Sequence">
       <activities xsi:type="org.pi4soa.cdl:Interaction" name="RequestStudy" operation="RequestStudy" channelVariable="//@choreographies.0/@variableDefinitions.0" relationship="//@typeDefinitions/@relationshipTypes.0">
-        <exchangeDetails description="This is the exchange details for the request exchange associated with interaction RequestStudy" name="RequestStudyRequestExchange" type="//@typeDefinitions/@informationTypes.7"/>
+        <exchangeDetails description="This is the exchange details for the request exchange associated with interaction RequestStudy" name="RequestStudyRequestExchange" type="//@typeDefinitions/@informationTypes.5"/>
       </activities>
       <activities xsi:type="org.pi4soa.cdl:Interaction" name="RequestStudyResponse" operation="RequestStudy" channelVariable="//@choreographies.0/@variableDefinitions.0" relationship="//@typeDefinitions/@relationshipTypes.0">
-        <exchangeDetails description="This is the exchange details for the respond exchange associated with interaction RequestStudyResponse" name="RequestStudyResponseRespondExchange" type="//@typeDefinitions/@informationTypes.8" action="Respond"/>
-      </activities>
-      <activities xsi:type="org.pi4soa.cdl:Interaction" name="GetPendingStudies" operation="GetPendingStudies" channelVariable="//@choreographies.0/@variableDefinitions.1" relationship="//@typeDefinitions/@relationshipTypes.1">
-        <exchangeDetails description="This is the exchange details for the request exchange associated with interaction GetPendingStudies" name="GetPendingStudiesRequestExchange" type="//@typeDefinitions/@informationTypes.4"/>
-      </activities>
-      <activities xsi:type="org.pi4soa.cdl:Interaction" name="GetPendingStudiesResponse" operation="GetPendingStudies" channelVariable="//@choreographies.0/@variableDefinitions.1" relationship="//@typeDefinitions/@relationshipTypes.1">
-        <exchangeDetails description="This is the exchange details for the respond exchange associated with interaction GetPendingStudiesResponse" name="GetPendingStudiesResponseRespondExchange" type="//@typeDefinitions/@informationTypes.5" action="Respond"/>
-      </activities>
-      <activities xsi:type="org.pi4soa.cdl:Interaction" name="StartStudy" operation="StartStudy" channelVariable="//@choreographies.0/@variableDefinitions.1" relationship="//@typeDefinitions/@relationshipTypes.1">
-        <exchangeDetails description="This is the exchange details for the request exchange associated with interaction StartStudy" name="StartStudyRequestExchange" type="//@typeDefinitions/@informationTypes.11"/>
-      </activities>
-      <activities xsi:type="org.pi4soa.cdl:Interaction" name="StartStudyResponse" operation="StartStudy" channelVariable="//@choreographies.0/@variableDefinitions.1" relationship="//@typeDefinitions/@relationshipTypes.1">
-        <exchangeDetails description="This is the exchange details for the respond exchange associated with interaction StartStudyResponse" name="StartStudyResponseRespondExchange" type="//@typeDefinitions/@informationTypes.12" action="Respond"/>
+        <exchangeDetails description="This is the exchange details for the respond exchange associated with interaction RequestStudyResponse" name="RequestStudyResponseRespondExchange" type="//@typeDefinitions/@informationTypes.6" action="Respond"/>
       </activities>
       <activities xsi:type="org.pi4soa.cdl:Parallel">
         <activities xsi:type="org.pi4soa.cdl:Sequence">
@@ -78,12 +56,6 @@
           </activities>
         </activities>
         <activities xsi:type="org.pi4soa.cdl:Sequence">
-          <activities xsi:type="org.pi4soa.cdl:Interaction" name="SetStudyAsCompleted" operation="SetStudyAsCompleted" channelVariable="//@choreographies.0/@variableDefinitions.1" relationship="//@typeDefinitions/@relationshipTypes.1">
-            <exchangeDetails description="This is the exchange details for the request exchange associated with interaction SetStudyAsCompleted" name="SetStudyAsCompletedRequestExchange" type="//@typeDefinitions/@informationTypes.9"/>
-          </activities>
-          <activities xsi:type="org.pi4soa.cdl:Interaction" name="SetStudyAsCompletedResponse" operation="SetStudyAsCompleted" channelVariable="//@choreographies.0/@variableDefinitions.1" relationship="//@typeDefinitions/@relationshipTypes.1">
-            <exchangeDetails description="This is the exchange details for the respond exchange associated with interaction SetStudyAsCompletedResponse" name="SetStudyAsCompletedResponseRespondExchange" type="//@typeDefinitions/@informationTypes.10" action="Respond"/>
-          </activities>
           <activities xsi:type="org.pi4soa.cdl:Interaction" name="GetCompletedStudies" channelVariable="//@choreographies.0/@variableDefinitions.0" relationship="//@typeDefinitions/@relationshipTypes.0">
             <exchangeDetails description="This is the exchange details for the request exchange associated with interaction GetCompletedStudies" name="GetCompletedStudiesRequestExchange" type="//@typeDefinitions/@informationTypes.2"/>
           </activities>

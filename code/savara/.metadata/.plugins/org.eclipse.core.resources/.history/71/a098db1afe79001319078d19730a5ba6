@@ -66,7 +66,7 @@
         <exchangeDetails description="This is the exchange details for the request exchange associated with interaction StartStudy" name="StartStudyRequestExchange" type="//@typeDefinitions/@informationTypes.11"/>
       </activities>
       <activities xsi:type="org.pi4soa.cdl:Interaction" name="StartStudyResponse" operation="StartStudy" channelVariable="//@choreographies.0/@variableDefinitions.1" relationship="//@typeDefinitions/@relationshipTypes.1">
-        <exchangeDetails description="This is the exchange details for the respond exchange associated with interaction StartStudyResponse" name="StartStudyResponseRespondExchange" type="//@typeDefinitions/@informationTypes.12" action="Respond"/>
+        <exchangeDetails description="This is the exchange details for the request exchange associated with interaction StartStudyResponse" name="StartStudyResponseRequestExchange"/>
       </activities>
       <activities xsi:type="org.pi4soa.cdl:Parallel">
         <activities xsi:type="org.pi4soa.cdl:Sequence">
@@ -78,12 +78,6 @@
           </activities>
         </activities>
         <activities xsi:type="org.pi4soa.cdl:Sequence">
-          <activities xsi:type="org.pi4soa.cdl:Interaction" name="SetStudyAsCompleted" operation="SetStudyAsCompleted" channelVariable="//@choreographies.0/@variableDefinitions.1" relationship="//@typeDefinitions/@relationshipTypes.1">
-            <exchangeDetails description="This is the exchange details for the request exchange associated with interaction SetStudyAsCompleted" name="SetStudyAsCompletedRequestExchange" type="//@typeDefinitions/@informationTypes.9"/>
-          </activities>
-          <activities xsi:type="org.pi4soa.cdl:Interaction" name="SetStudyAsCompletedResponse" operation="SetStudyAsCompleted" channelVariable="//@choreographies.0/@variableDefinitions.1" relationship="//@typeDefinitions/@relationshipTypes.1">
-            <exchangeDetails description="This is the exchange details for the respond exchange associated with interaction SetStudyAsCompletedResponse" name="SetStudyAsCompletedResponseRespondExchange" type="//@typeDefinitions/@informationTypes.10" action="Respond"/>
-          </activities>
           <activities xsi:type="org.pi4soa.cdl:Interaction" name="GetCompletedStudies" channelVariable="//@choreographies.0/@variableDefinitions.0" relationship="//@typeDefinitions/@relationshipTypes.0">
             <exchangeDetails description="This is the exchange details for the request exchange associated with interaction GetCompletedStudies" name="GetCompletedStudiesRequestExchange" type="//@typeDefinitions/@informationTypes.2"/>
           </activities>
