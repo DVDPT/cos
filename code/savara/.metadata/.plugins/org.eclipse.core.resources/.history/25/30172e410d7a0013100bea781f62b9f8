@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<scenario xmlns="http://www.savara.org/scenario">
+    <role id="84ce2561-7630-4528-8b1e-93b0069fd83a"/>
+    <role id="9881952c-ad60-4b07-b8cd-e1addf3a57fe"/>
+    <role id="95e064cc-1da9-4479-8fc5-3ef36c7ca14a"/>
+    <event xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SendEvent" role="84ce2561-7630-4528-8b1e-93b0069fd83a" id="c8182909-8167-4c07-8ebb-5b50c054c6f4"/>
+    <event xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReceiveEvent" role="9881952c-ad60-4b07-b8cd-e1addf3a57fe" id="7112234e-c60f-4ae3-9b1f-5db6a5f479a4"/>
+    <event xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SendEvent" role="9881952c-ad60-4b07-b8cd-e1addf3a57fe" id="26df7a7f-4840-44ab-9ebe-8386fb71ed35"/>
+    <event xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReceiveEvent" role="84ce2561-7630-4528-8b1e-93b0069fd83a" id="402ff182-e27b-483f-b80c-d19d3e364020"/>
+    <link source="c8182909-8167-4c07-8ebb-5b50c054c6f4" target="7112234e-c60f-4ae3-9b1f-5db6a5f479a4"/>
+    <link source="26df7a7f-4840-44ab-9ebe-8386fb71ed35" target="402ff182-e27b-483f-b80c-d19d3e364020"/>
+</scenario>
