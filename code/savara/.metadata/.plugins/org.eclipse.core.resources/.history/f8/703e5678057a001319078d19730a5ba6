@@ -97,11 +97,10 @@
       <activities xsi:type="org.pi4soa.cdl:Parallel">
         <activities xsi:type="org.pi4soa.cdl:Sequence">
           <activities xsi:type="org.pi4soa.cdl:Perform" choreography="//@choreographies.0/@enclosedChoreographies.0"/>
-          <activities xsi:type="org.pi4soa.cdl:Finalize" name="ConfirmStudyFinalizer" choreography="//@choreographies.0/@enclosedChoreographies.1"/>
+          <activities xsi:type="org.pi4soa.cdl:Finalize" choreography="//@choreographies.0/@enclosedChoreographies.1"/>
         </activities>
         <activities xsi:type="org.pi4soa.cdl:Sequence">
           <activities xsi:type="org.pi4soa.cdl:Perform" choreography="//@choreographies.0/@enclosedChoreographies.1"/>
-          <activities xsi:type="org.pi4soa.cdl:Finalize" name="CancelStudyFinalizer" choreography="//@choreographies.0/@enclosedChoreographies.0"/>
         </activities>
       </activities>
     </activities>
