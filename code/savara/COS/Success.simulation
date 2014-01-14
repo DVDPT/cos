@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<simulation xmlns="http://www.savara.org/scenario/simulation" scenario="D:\Rnunes\ISEL\COS\cos\code\savara\COS\Success.scn">
+    <roles scenarioRole="Client" model="D:\Rnunes\ISEL\COS\cos\code\savara\COS\Client.cdm" modelRole="{http://www.pi4soa.org/Client}EmployeeParticipant" simulator="WS-CDL simulator"/>
+    <roles scenarioRole="BrandAnalytics" model="D:\Rnunes\ISEL\COS\cos\code\savara\COS\Client.cdm" modelRole="{http://www.pi4soa.org/Client}BrandAnalyticsParticipant" simulator="WS-CDL simulator"/>
+    <roles scenarioRole="Employee" model="D:\Rnunes\ISEL\COS\cos\code\savara\COS\Client.cdm" modelRole="{http://www.pi4soa.org/Client}EmployeeParticipant" simulator="WS-CDL simulator"/>
+    <simulators name="WS-CDL simulator">
+        <className>org.savara.scenario.simulator.cdm.CDMRoleSimulator</className>
+    </simulators>
+</simulation>
