@@ -3,52 +3,52 @@
     <role id="84ce2561-7630-4528-8b1e-93b0069fd83a" name="Client"/>
     <role id="9881952c-ad60-4b07-b8cd-e1addf3a57fe" name="BrandAnalytics"/>
     <role id="95e064cc-1da9-4479-8fc5-3ef36c7ca14a" name="Employee"/>
-    <event xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SendEvent" operationName="requestStudy" role="84ce2561-7630-4528-8b1e-93b0069fd83a" id="c8182909-8167-4c07-8ebb-5b50c054c6f4">
-        <parameter type="RequestStudy" value="../Messages/RequestStudy.xml"/>
+    <event xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SendEvent" operationName="RequestStudy" role="84ce2561-7630-4528-8b1e-93b0069fd83a" id="c8182909-8167-4c07-8ebb-5b50c054c6f4">
+        <parameter type="RequestStudy" value="/Messages/RequestStudy.xml"/>
     </event>
-    <event xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReceiveEvent" operationName="requestStudy" role="9881952c-ad60-4b07-b8cd-e1addf3a57fe" id="7112234e-c60f-4ae3-9b1f-5db6a5f479a4">
-        <parameter type="RequestStudy" value="../Messages/RequestStudy.xml"/>
+    <event xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReceiveEvent" operationName="RequestStudy" role="9881952c-ad60-4b07-b8cd-e1addf3a57fe" id="7112234e-c60f-4ae3-9b1f-5db6a5f479a4">
+        <parameter type="RequestStudy" value="/Messages/RequestStudy.xml"/>
     </event>
-    <event xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SendEvent" operationName="requestStudy" role="9881952c-ad60-4b07-b8cd-e1addf3a57fe" id="26df7a7f-4840-44ab-9ebe-8386fb71ed35">
+    <event xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SendEvent" operationName="RequestStudy" role="9881952c-ad60-4b07-b8cd-e1addf3a57fe" id="26df7a7f-4840-44ab-9ebe-8386fb71ed35">
         <parameter type="RequestStudyResponse" value="../Messages/RequestStudyResponse.xml"/>
     </event>
-    <event xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReceiveEvent" operationName="requestStudy" role="84ce2561-7630-4528-8b1e-93b0069fd83a" id="402ff182-e27b-483f-b80c-d19d3e364020">
+    <event xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReceiveEvent" operationName="RequestStudy" role="84ce2561-7630-4528-8b1e-93b0069fd83a" id="402ff182-e27b-483f-b80c-d19d3e364020">
         <parameter type="RequestStudyResponse" value="../Messages/RequestStudyResponse.xml"/>
     </event>
-    <event xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SendEvent" operationName="getPendingStudies" role="95e064cc-1da9-4479-8fc5-3ef36c7ca14a" id="8f464f82-6494-4b64-b596-e80cf1a6cb95">
+    <event xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SendEvent" operationName="GetPendingStudies" role="95e064cc-1da9-4479-8fc5-3ef36c7ca14a" id="8f464f82-6494-4b64-b596-e80cf1a6cb95">
         <parameter type="GetPendingStudies" value="../Messages/GetPendingStudies.xml"/>
     </event>
-    <event xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReceiveEvent" operationName="getPendingStudies" role="9881952c-ad60-4b07-b8cd-e1addf3a57fe" id="9d9447f4-b994-4acb-9aac-915c127e7973">
+    <event xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReceiveEvent" operationName="GetPendingStudies" role="9881952c-ad60-4b07-b8cd-e1addf3a57fe" id="9d9447f4-b994-4acb-9aac-915c127e7973">
         <parameter type="GetPendingStudies" value="../Messages/GetPendingStudies.xml"/>
     </event>
-    <event xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SendEvent" operationName="getPendingStudies" role="9881952c-ad60-4b07-b8cd-e1addf3a57fe" id="290088ee-1a51-4508-85b5-1b4a2cb2e677">
+    <event xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SendEvent" operationName="GetPendingStudies" role="9881952c-ad60-4b07-b8cd-e1addf3a57fe" id="290088ee-1a51-4508-85b5-1b4a2cb2e677">
         <parameter type="GetPendingStudiesResponse" value="../Messages/GetPendingStudiesResponse.xml"/>
     </event>
-    <event xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReceiveEvent" operationName="getPendingStudies" role="95e064cc-1da9-4479-8fc5-3ef36c7ca14a" id="84c53904-f252-4cdb-a7d0-1e69bbc25e45">
+    <event xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReceiveEvent" operationName="GetPendingStudies" role="95e064cc-1da9-4479-8fc5-3ef36c7ca14a" id="84c53904-f252-4cdb-a7d0-1e69bbc25e45">
         <parameter type="GetPendingStudiesResponse" value="../Messages/GetPendingStudiesResponse.xml"/>
     </event>
-    <event xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SendEvent" operationName="startStudy" role="95e064cc-1da9-4479-8fc5-3ef36c7ca14a" id="6d47fc5f-14a5-4c44-adb1-c9080bf6da98">
+    <event xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SendEvent" operationName="StartStudy" role="95e064cc-1da9-4479-8fc5-3ef36c7ca14a" id="6d47fc5f-14a5-4c44-adb1-c9080bf6da98">
         <parameter type="StartStudy" value="../Messages/StartStudy.xml"/>
     </event>
-    <event xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReceiveEvent" operationName="startStudy" role="9881952c-ad60-4b07-b8cd-e1addf3a57fe" id="375d7352-a6f1-4549-ae38-3580a5d29d97">
+    <event xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReceiveEvent" operationName="StartStudy" role="9881952c-ad60-4b07-b8cd-e1addf3a57fe" id="375d7352-a6f1-4549-ae38-3580a5d29d97">
         <parameter type="StartStudy" value="../Messages/StartStudy.xml"/>
     </event>
-    <event xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SendEvent" operationName="startStudy" role="9881952c-ad60-4b07-b8cd-e1addf3a57fe" id="6a0ccbc0-39fd-4403-ab61-5d80ac0c0a40">
+    <event xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SendEvent" operationName="StartStudy" role="9881952c-ad60-4b07-b8cd-e1addf3a57fe" id="6a0ccbc0-39fd-4403-ab61-5d80ac0c0a40">
         <parameter type="StartStudyResponse" value="../Messages/StartStudyResponse.xml"/>
     </event>
-    <event xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReceiveEvent" operationName="startStudy" role="95e064cc-1da9-4479-8fc5-3ef36c7ca14a" id="9087e9d2-0244-4d20-ae78-93af2c572091">
+    <event xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReceiveEvent" operationName="StartStudy" role="95e064cc-1da9-4479-8fc5-3ef36c7ca14a" id="9087e9d2-0244-4d20-ae78-93af2c572091">
         <parameter type="StartStudyResponse" value="../Messages/StartStudyResponse.xml"/>
     </event>
-    <event xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SendEvent" operationName="cancelStudy" role="84ce2561-7630-4528-8b1e-93b0069fd83a" id="11a45f8d-3354-44c1-b7e3-350bce6150dd">
+    <event xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SendEvent" operationName="CancelStudy" role="84ce2561-7630-4528-8b1e-93b0069fd83a" id="11a45f8d-3354-44c1-b7e3-350bce6150dd">
         <parameter type="CancelStudy" value="../Messages/CancelStudy.xml"/>
     </event>
-    <event xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReceiveEvent" operationName="cancelStudy" role="9881952c-ad60-4b07-b8cd-e1addf3a57fe" id="e9e88bf8-fb13-47f7-9a1b-63b13389f2f9">
+    <event xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReceiveEvent" operationName="CancelStudy" role="9881952c-ad60-4b07-b8cd-e1addf3a57fe" id="e9e88bf8-fb13-47f7-9a1b-63b13389f2f9">
         <parameter type="CancelStudy" value="../Messages/CancelStudy.xml"/>
     </event>
-    <event xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SendEvent" operationName="cancelStudy" role="9881952c-ad60-4b07-b8cd-e1addf3a57fe" id="0265fffc-2b31-4c34-bff8-95bd04c68961">
+    <event xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SendEvent" operationName="CancelStudy" role="9881952c-ad60-4b07-b8cd-e1addf3a57fe" id="0265fffc-2b31-4c34-bff8-95bd04c68961">
         <parameter type="CancelStudyResponse" value="../Messages/CancelStudyResponse.xml"/>
     </event>
-    <event xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReceiveEvent" operationName="cancelStudy" role="84ce2561-7630-4528-8b1e-93b0069fd83a" id="3b6038d5-6073-46be-9dc7-29a7a57458da">
+    <event xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReceiveEvent" operationName="CancelStudy" role="84ce2561-7630-4528-8b1e-93b0069fd83a" id="3b6038d5-6073-46be-9dc7-29a7a57458da">
         <parameter type="CancelStudyResponse" value="../Messages/CancelStudyResponse.xml"/>
     </event>
     <link source="c8182909-8167-4c07-8ebb-5b50c054c6f4" target="7112234e-c60f-4ae3-9b1f-5db6a5f479a4"/>

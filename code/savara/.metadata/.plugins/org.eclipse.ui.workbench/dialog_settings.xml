@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="NewWizardAction">
+		<item value="org.pi4soa.scenario.designer.editor.ScenarioModelWizardID" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.pi4soa.Wizard.category.ID"/>
+			<item value="org.savara.Wizard.category.ID"/>
+		</list>
+	</section>
+</section>

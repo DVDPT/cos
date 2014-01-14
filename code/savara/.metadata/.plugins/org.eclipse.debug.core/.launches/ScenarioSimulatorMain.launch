@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.pi4soa.scenario.eclipse.ScenarioTestLauncher">
+<stringAttribute key="execute_services" value="C:\Users\Diogo\AppData\Local\Temp\savara7314151010574284678.simulation"/>
+<stringAttribute key="project" value="COS"/>
+<stringAttribute key="scenario" value="Cancel.scn"/>
+</launchConfiguration>
