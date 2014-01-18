@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <scn:Scenario xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:scn="http://www.pi4soa.org/scenario" name="CancelUnexistantStudy" description="desc" author="me" choreographyDescriptionURL="Client.cdm">
-  <scenarioObjects xsi:type="scn:MessageEvent" description="desc" participant="//@participants.0" operationName="CancelStudy" messageType="{http://www.example.org/ClientSchema}CancelStudy" valueURL="ClientSchema.xsd"/>
-  <scenarioObjects xsi:type="scn:MessageEvent" description="desc" participant="//@participants.1" operationName="CancelStudy" direction="receive" messageType="{http://www.example.org/ClientSchema}CancelStudy" valueURL="ClientSchema.xsd"/>
-  <scenarioObjects xsi:type="scn:MessageEvent" description="desc" participant="//@participants.1" operationName="CancelStudy" isRequest="false" messageType="{http://www.example.org/ClientSchema}CancelStudyResponse" valueURL="ClientSchema.xsd"/>
-  <scenarioObjects xsi:type="scn:MessageEvent" description="desc" participant="//@participants.0" operationName="CancelStudy" isRequest="false" direction="receive" messageType="{http://www.example.org/ClientSchema}CancelStudyResponse" valueURL="ClientSchema.xsd"/>
+  <scenarioObjects xsi:type="scn:MessageEvent" description="desc" participant="//@participants.0" causesException="true" operationName="CancelStudy" messageType="{http://www.example.org/ClientSchema}CancelStudy" valueURL="ClientSchema.xsd"/>
+  <scenarioObjects xsi:type="scn:MessageEvent" description="desc" participant="//@participants.1" causesException="true" operationName="CancelStudy" direction="receive" messageType="{http://www.example.org/ClientSchema}CancelStudy" valueURL="ClientSchema.xsd"/>
+  <scenarioObjects xsi:type="scn:MessageEvent" description="desc" participant="//@participants.1" causesException="true" operationName="CancelStudy" isRequest="false" messageType="{http://www.example.org/ClientSchema}CancelStudyResponse" valueURL="ClientSchema.xsd"/>
+  <scenarioObjects xsi:type="scn:MessageEvent" description="desc" participant="//@participants.0" causesException="true" operationName="CancelStudy" isRequest="false" direction="receive" messageType="{http://www.example.org/ClientSchema}CancelStudyResponse" valueURL="ClientSchema.xsd"/>
   <messageLinks source="//@scenarioObjects.0" target="//@scenarioObjects.1"/>
   <messageLinks source="//@scenarioObjects.2" target="//@scenarioObjects.3"/>
   <participants type="ClientParticipant" instance="Client"/>
