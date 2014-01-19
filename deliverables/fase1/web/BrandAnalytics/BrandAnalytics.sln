@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientApplication", "..\..\wpf\ClientApplication\ClientApplication.csproj", "{FCABD987-BF45-4036-B0D0-36859BA56664}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrandAnalytics.Data", "BrandAnalytics.Data\BrandAnalytics.Data.csproj", "{F6699704-5FF4-4900-80FD-978219884EBC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrandAnalytics.Database", "BrandAnalytics.Database\BrandAnalytics.Database.csproj", "{1197F212-6834-4965-96B9-A78221350BB6}"
+EndProject
+Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "BrandAnalytics.Cloud", "..\BrandAnalytics.Cloud\BrandAnalytics.Cloud.ccproj", "{F68208A7-B76F-4C77-9538-67321A59E327}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrandAnalytics.Service", "BrandAnalytics.Service\BrandAnalytics.Service.csproj", "{13860198-88D4-4FED-A7A1-65A3760F6517}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwitterSpy.Worker", "TwitterSpy.Worker\TwitterSpy.Worker.csproj", "{01454666-C4D5-4C29-9CBF-76A63B69B0B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrandAnalytics.Common", "..\BrandAnalytics.Common\BrandAnalytics.Common.csproj", "{21A55502-3753-46D7-8E18-2CE9527BBF22}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FCABD987-BF45-4036-B0D0-36859BA56664}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCABD987-BF45-4036-B0D0-36859BA56664}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCABD987-BF45-4036-B0D0-36859BA56664}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCABD987-BF45-4036-B0D0-36859BA56664}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6699704-5FF4-4900-80FD-978219884EBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6699704-5FF4-4900-80FD-978219884EBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6699704-5FF4-4900-80FD-978219884EBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6699704-5FF4-4900-80FD-978219884EBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1197F212-6834-4965-96B9-A78221350BB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1197F212-6834-4965-96B9-A78221350BB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1197F212-6834-4965-96B9-A78221350BB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1197F212-6834-4965-96B9-A78221350BB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F68208A7-B76F-4C77-9538-67321A59E327}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F68208A7-B76F-4C77-9538-67321A59E327}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F68208A7-B76F-4C77-9538-67321A59E327}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F68208A7-B76F-4C77-9538-67321A59E327}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13860198-88D4-4FED-A7A1-65A3760F6517}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13860198-88D4-4FED-A7A1-65A3760F6517}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13860198-88D4-4FED-A7A1-65A3760F6517}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13860198-88D4-4FED-A7A1-65A3760F6517}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01454666-C4D5-4C29-9CBF-76A63B69B0B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01454666-C4D5-4C29-9CBF-76A63B69B0B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01454666-C4D5-4C29-9CBF-76A63B69B0B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01454666-C4D5-4C29-9CBF-76A63B69B0B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21A55502-3753-46D7-8E18-2CE9527BBF22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21A55502-3753-46D7-8E18-2CE9527BBF22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21A55502-3753-46D7-8E18-2CE9527BBF22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21A55502-3753-46D7-8E18-2CE9527BBF22}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

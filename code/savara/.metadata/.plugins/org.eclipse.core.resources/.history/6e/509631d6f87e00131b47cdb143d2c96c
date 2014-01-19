@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scn:Scenario xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:scn="http://www.pi4soa.org/scenario" name="Test" description="Test" author="me" choreographyDescriptionURL="Client.cdm">
+  <scenarioObjects xsi:type="scn:MessageEvent" description="x" participant="//@participants.0" operationName="RequestStudy" faultName="" messageType="{http://www.example.org/ClientSchema}RequestStudy" valueURL="ClientSchema.xsd"/>
+  <scenarioObjects xsi:type="scn:MessageEvent" description="x" participant="//@participants.1" operationName="RequestStudy" faultName="" direction="receive" messageType="{http://www.example.org/ClientSchema}RequestStudy" valueURL="ClientSchema.xsd"/>
+  <messageLinks source="//@scenarioObjects.0" target="//@scenarioObjects.1"/>
+  <participants type="ClientParticipant" instance="Client"/>
+  <participants type="BrandAnalyticsParticipant" instance="Service"/>
+</scn:Scenario>

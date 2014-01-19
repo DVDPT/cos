@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="Cp1252"?>
+<org.pi4soa.cdl:Package xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:org.pi4soa.cdl="http:///org/pi4soa/cdl.ecore" description="The choreography description for My" name="My" author="Diogo" version="0.1" targetNamespace="http://www.pi4soa.org/My">
+  <typeDefinitions>
+    <nameSpaces description="Target Namespace for My" prefix="tns" uRI="http://www.pi4soa.org/My"/>
+    <nameSpaces description="XML Schema Namespace" prefix="xsd" uRI="http://www.w3.org/2001/XMLSchema"/>
+    <nameSpaces prefix="cs" uRI="http://www.example.org/ClientSchema" schemaLocation="ClientSchema.xsd"/>
+    <informationTypes description="This is the information type Req" name="Req" elementName="cs:RequestStudy"/>
+    <informationTypes description="This is the information type Resp" name="Resp" elementName="cs:RequestStudyResponse"/>
+    <informationTypes name="URIType" typeName="xsd:anyURI"/>
+    <tokens name="URIToken" informationType="//@typeDefinitions/@informationTypes.2"/>
+    <roleTypes description="This is the role type Role1" name="Role1">
+      <behaviors description="This is the behavior Role1Behavior" name="Role1Behavior"/>
+    </roleTypes>
+    <roleTypes description="This is the role type Role2" name="Role2">
+      <behaviors description="This is the behavior Role2Behavior" name="Role2Behavior"/>
+    </roleTypes>
+    <roleTypes description="This is the role type Role3" name="Role3">
+      <behaviors description="This is the behavior Role3Behavior" name="Role3Behavior"/>
+    </roleTypes>
+    <relationshipTypes description="Relationship between Role2 and Role1" name="Role2ToRole1Rel" firstRoleType="//@typeDefinitions/@roleTypes.1" secondRoleType="//@typeDefinitions/@roleTypes.0"/>
+    <relationshipTypes description="Relationship between Role3 and Role1" name="Role3ToRole1Rel" firstRoleType="//@typeDefinitions/@roleTypes.2" secondRoleType="//@typeDefinitions/@roleTypes.0"/>
+    <participantTypes description="This is the participant type Role1Participant" name="Role1Participant" roleTypes="//@typeDefinitions/@roleTypes.0"/>
+    <participantTypes description="This is the participant type Role2Participant" name="Role2Participant" roleTypes="//@typeDefinitions/@roleTypes.1"/>
+    <participantTypes description="This is the participant type Role3Participant" name="Role3Participant" roleTypes="//@typeDefinitions/@roleTypes.2"/>
+    <channelTypes description="This is the channel type Role1ChannelType" name="Role1ChannelType" referenceToken="//@typeDefinitions/@tokens.0" roleType="//@typeDefinitions/@roleTypes.0"/>
+    <channelTypes description="This is the channel type Role2ChannelType" name="Role2ChannelType" referenceToken="//@typeDefinitions/@tokens.0" roleType="//@typeDefinitions/@roleTypes.0"/>
+  </typeDefinitions>
+  <choreographies description="Choreography flow for the My process" name="MyProcess" root="true">
+    <enclosedChoreographies name="a1">
+      <variableDefinitions description="Channel to facilitate interaction to Role1" name="Role2Channel" type="//@typeDefinitions/@channelTypes.1"/>
+      <activities xsi:type="org.pi4soa.cdl:Interaction" name="req" operation="req" channelVariable="//@choreographies.0/@enclosedChoreographies.0/@variableDefinitions.0" relationship="//@typeDefinitions/@relationshipTypes.0">
+        <exchangeDetails description="This is the exchange details for the request exchange associated with interaction req" name="reqRequestExchange"/>
+      </activities>
+    </enclosedChoreographies>
+    <enclosedChoreographies name="a2">
+      <variableDefinitions description="Channel to facilitate interaction to Role1" name="Role1Channel" type="//@typeDefinitions/@channelTypes.0"/>
+      <activities xsi:type="org.pi4soa.cdl:Interaction" name="asd" operation="asd" channelVariable="//@choreographies.0/@enclosedChoreographies.1/@variableDefinitions.0" relationship="//@typeDefinitions/@relationshipTypes.0">
+        <exchangeDetails description="This is the exchange details for the request exchange associated with interaction asd" name="asdRequestExchange"/>
+      </activities>
+    </enclosedChoreographies>
+    <variableDefinitions description="Channel to facilitate interaction to Role1" name="Role1Channel" type="//@typeDefinitions/@channelTypes.0"/>
+    <activities xsi:type="org.pi4soa.cdl:Sequence">
+      <activities xsi:type="org.pi4soa.cdl:Interaction" description="&#x9;&#x9;" name="req" operation="req" channelVariable="//@choreographies.0/@variableDefinitions.0" relationship="//@typeDefinitions/@relationshipTypes.0">
+        <exchangeDetails description="This is the exchange details for the request exchange associated with interaction req" name="reqRequestExchange" type="//@typeDefinitions/@informationTypes.0"/>
+      </activities>
+      <activities xsi:type="org.pi4soa.cdl:Interaction" name="resp" operation="req" channelVariable="//@choreographies.0/@variableDefinitions.0" relationship="//@typeDefinitions/@relationshipTypes.0">
+        <exchangeDetails description="This is the exchange details for the respond exchange associated with interaction resp" name="respRespondExchange" type="//@typeDefinitions/@informationTypes.1" action="Respond"/>
+      </activities>
+    </activities>
+  </choreographies>
+</org.pi4soa.cdl:Package>

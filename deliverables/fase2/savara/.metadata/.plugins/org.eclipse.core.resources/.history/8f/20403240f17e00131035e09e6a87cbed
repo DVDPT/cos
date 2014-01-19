@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scn:Scenario xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:scn="http://www.pi4soa.org/scenario" name="Success" description="desc" author="me" choreographyDescriptionURL="Client.cdm">
+  <scenarioObjects xsi:type="scn:MessageEvent" description="desc" participant="//@participants.0" operationName="RequestStudy" messageType="{http://www.example.org/ClientSchema}RequestStudy" valueURL="ClientSchema.xsd"/>
+  <scenarioObjects xsi:type="scn:MessageEvent" description="desc" participant="//@participants.1" operationName="RequestStudy" direction="receive" messageType="{http://www.example.org/ClientSchema}RequestStudy" valueURL="ClientSchema.xsd"/>
+  <scenarioObjects xsi:type="scn:MessageEvent" description="desc" participant="//@participants.1" operationName="RequestStudy" isRequest="false" messageType="{http://www.example.org/ClientSchema}RequestStudyResponse" valueURL="ClientSchema.xsd"/>
+  <scenarioObjects xsi:type="scn:MessageEvent" description="desc" participant="//@participants.2" operationName="GetPendingStudies" messageType="{http://www.example.org/ClientSchema}GetPendingStudies" valueURL="ClientSchema.xsd"/>
+  <scenarioObjects xsi:type="scn:MessageEvent" description="desc" participant="//@participants.0" operationName="RequestStudy" isRequest="false" direction="receive" messageType="{http://www.example.org/ClientSchema}RequestStudyResponse" valueURL="ClientSchema.xsd"/>
+  <scenarioObjects xsi:type="scn:MessageEvent" description="desc" participant="//@participants.1" operationName="GetPendingStudies" direction="receive" messageType="{http://www.example.org/ClientSchema}GetPendingStudies" valueURL="ClientSchema.xsd"/>
+  <scenarioObjects xsi:type="scn:MessageEvent" description="desc" participant="//@participants.1" operationName="GetPendingStudies" isRequest="false" messageType="{http://www.example.org/ClientSchema}GetPendingStudiesResponse" valueURL="ClientSchema.xsd"/>
+  <scenarioObjects xsi:type="scn:MessageEvent" description="desc" participant="//@participants.2" operationName="GetPendingStudies" isRequest="false" direction="receive" messageType="{http://www.example.org/ClientSchema}GetPendingStudiesResponse" valueURL="ClientSchema.xsd"/>
+  <scenarioObjects xsi:type="scn:MessageEvent" description="desc" participant="//@participants.2" operationName="StartStudy" messageType="{http://www.example.org/ClientSchema}StartStudy" valueURL="ClientSchema.xsd"/>
+  <scenarioObjects xsi:type="scn:MessageEvent" description="desc" participant="//@participants.1" operationName="StartStudy" direction="receive" messageType="{http://www.example.org/ClientSchema}StartStudy" valueURL="ClientSchema.xsd"/>
+  <scenarioObjects xsi:type="scn:MessageEvent" description="desc" participant="//@participants.1" operationName="StartStudy" isRequest="false" messageType="{http://www.example.org/ClientSchema}StartStudyResponse" valueURL="ClientSchema.xsd"/>
+  <scenarioObjects xsi:type="scn:MessageEvent" description="desc" participant="//@participants.2" operationName="StartStudy" isRequest="false" direction="receive" messageType="{http://www.example.org/ClientSchema}StartStudyResponse" valueURL="ClientSchema.xsd"/>
+  <scenarioObjects xsi:type="scn:MessageEvent" description="desc" participant="//@participants.2" operationName="StartStudy" messageType="{http://www.example.org/ClientSchema}SetStudyAsCompleted" valueURL="ClientSchema.xsd"/>
+  <scenarioObjects xsi:type="scn:MessageEvent" description="desc" participant="//@participants.1" operationName="SetStudyAsCompleted" direction="receive" messageType="{http://www.example.org/ClientSchema}SetStudyAsCompleted" valueURL="ClientSchema.xsd"/>
+  <messageLinks source="//@scenarioObjects.0" target="//@scenarioObjects.1"/>
+  <messageLinks source="//@scenarioObjects.2" target="//@scenarioObjects.4"/>
+  <messageLinks source="//@scenarioObjects.3" target="//@scenarioObjects.5"/>
+  <messageLinks source="//@scenarioObjects.6" target="//@scenarioObjects.7"/>
+  <messageLinks source="//@scenarioObjects.8" target="//@scenarioObjects.9"/>
+  <messageLinks source="//@scenarioObjects.10" target="//@scenarioObjects.11"/>
+  <messageLinks source="//@scenarioObjects.12" target="//@scenarioObjects.13"/>
+  <participants type="ClientParticipant" instance="Client"/>
+  <participants type="BrandAnalyticsParticipant" instance="Service"/>
+  <participants type="EmployeeParticipant" instance="Employee"/>
+</scn:Scenario>

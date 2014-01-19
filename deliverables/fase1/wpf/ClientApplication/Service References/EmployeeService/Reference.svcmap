@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f212fe0b-4325-4861-8fcf-b8a059bd927d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://127.0.0.1/BrandAnalyticsService.Employees.xamlx" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="BrandAnalyticsService.disco" MetadataType="Disco" ID="07f8392f-d331-4326-ab74-9bd792aa80c0" SourceId="1" SourceUrl="http://127.0.0.1/BrandAnalyticsService.Employees.xamlx?disco" />
+    <MetadataFile FileName="BrandAnalyticsService.xsd" MetadataType="Schema" ID="5017b773-5358-4a28-88e8-3ab66987b010" SourceId="1" SourceUrl="http://127.0.0.1/BrandAnalyticsService.Employees.xamlx?xsd=xsd2" />
+    <MetadataFile FileName="BrandAnalyticsService1.xsd" MetadataType="Schema" ID="24752646-a026-4f6a-b6bb-2405347b2b54" SourceId="1" SourceUrl="http://127.0.0.1/BrandAnalyticsService.Employees.xamlx?xsd=xsd1" />
+    <MetadataFile FileName="BrandAnalyticsService2.xsd" MetadataType="Schema" ID="700a6eec-3c0b-4d99-b3e2-890ced76ae57" SourceId="1" SourceUrl="http://127.0.0.1/BrandAnalyticsService.Employees.xamlx?xsd=xsd0" />
+    <MetadataFile FileName="BrandAnalyticsService.wsdl" MetadataType="Wsdl" ID="7d574b73-2331-4d90-953d-abde7910573f" SourceId="1" SourceUrl="http://127.0.0.1/BrandAnalyticsService.Employees.xamlx?wsdl" />
+    <MetadataFile FileName="BrandAnalyticsService3.xsd" MetadataType="Schema" ID="63960318-f792-42af-9379-63e487c598b6" SourceId="1" SourceUrl="http://127.0.0.1/BrandAnalyticsService.Employees.xamlx?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

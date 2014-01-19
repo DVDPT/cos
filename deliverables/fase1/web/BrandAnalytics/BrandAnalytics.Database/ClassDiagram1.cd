@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BrandAnalytics.Database.InMemoryBrandAnalyticsDatabase">
+    <Position X="4.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAACACAAAAgACAAAAIAAAAAAAACgAAA=</HashCode>
+      <FileName>InMemoryBrandAnalyticsDatabase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BrandAnalytics.Database.BrandAnalyticsDatabaseFactory">
+    <Position X="1.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>BrandAnalyticsDatabaseFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="BrandAnalytics.Database.Mappers.IEntityMapper&lt;TKey, TEntity&gt;">
+    <Position X="6.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYAAAAAAAAAAABAAAAAAAAAAAEAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Mappers\IEntityMapper.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="BrandAnalytics.Database.IBrandAnalyticsDatabase">
+    <Position X="10.5" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAACACAAAAAACAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IBrandAnalyticsDatabase.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Clients" />
+      <Property Name="Employees" />
+      <Property Name="Studies" />
+    </ShowAsAssociation>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<scenario xmlns="http://www.savara.org/scenario">
+    <role id="78970908-692b-4a0a-99ab-17e49747f003" name="Client"/>
+    <role id="3e767373-aab6-4d0d-9411-0bbaf86d08b6" name="BrandAnalytics"/>
+    <role id="73b3e892-570b-4038-a447-fcdc2262f320" name="Employee"/>
+    <event xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SendEvent" operationName="RequestStudy" role="78970908-692b-4a0a-99ab-17e49747f003" id="51288e41-3612-495d-89e9-41b8aa2999a3"/>
+    <event xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReceiveEvent" operationName="RequestStudy" role="3e767373-aab6-4d0d-9411-0bbaf86d08b6" id="b4a8f043-ab2b-4057-98ad-da16118b6402"/>
+    <link source="51288e41-3612-495d-89e9-41b8aa2999a3" target="b4a8f043-ab2b-4057-98ad-da16118b6402"/>
+</scenario>

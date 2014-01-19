@@ -1,0 +1,262 @@
+﻿<WorkflowService mc:Ignorable="sap sap2010 sads" p1:TextExpression.Namespaces="{x:Reference __ReferenceID3}" p1:TextExpression.References="{x:Reference __ReferenceID4}" ConfigurationName="Service1" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap2010:WorkflowViewState.IdRef="WorkflowService_1" Name="Service1"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/servicemodel"
+ xmlns:bd="clr-namespace:BrandAnalytics.Data;assembly=BrandAnalytics.Data"
+ xmlns:bssc="clr-namespace:BrandAnalytics.Service.ServiceActivities.ClientService;assembly=BrandAnalytics"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities"
+ xmlns:p="http://tempuri.org/"
+ xmlns:p1="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+ xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <p1:Sequence DisplayName="Sequential Service" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <p1:TextExpression.Namespaces>
+      <sco:Collection x:TypeArguments="x:String" x:Name="__ReferenceID3">
+        <x:String>System</x:String>
+        <x:String>System.Collections.Generic</x:String>
+        <x:String>System.Data</x:String>
+        <x:String>System.Linq</x:String>
+        <x:String>System.Text</x:String>
+        <x:String>BrandAnalytics.Common</x:String>
+        <x:String>BrandAnalytics.Data</x:String>
+        <x:String>BrandAnalytics.Database</x:String>
+        <x:String>BrandAnalytics.Database.Mappers</x:String>
+      </sco:Collection>
+    </p1:TextExpression.Namespaces>
+    <p1:TextExpression.References>
+      <sco:Collection x:TypeArguments="p1:AssemblyReference" x:Name="__ReferenceID4">
+        <p1:AssemblyReference>Microsoft.CSharp</p1:AssemblyReference>
+        <p1:AssemblyReference>Microsoft.Data.Edm</p1:AssemblyReference>
+        <p1:AssemblyReference>Microsoft.Data.OData</p1:AssemblyReference>
+        <p1:AssemblyReference>Microsoft.WindowsAzure.Configuration</p1:AssemblyReference>
+        <p1:AssemblyReference>Microsoft.WindowsAzure.Diagnostics</p1:AssemblyReference>
+        <p1:AssemblyReference>Microsoft.WindowsAzure.ServiceRuntime</p1:AssemblyReference>
+        <p1:AssemblyReference>Microsoft.WindowsAzure.Storage</p1:AssemblyReference>
+        <p1:AssemblyReference>Newtonsoft.Json</p1:AssemblyReference>
+        <p1:AssemblyReference>PresentationCore</p1:AssemblyReference>
+        <p1:AssemblyReference>PresentationFramework</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Activities</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Activities.Presentation</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Data.Services.Client</p1:AssemblyReference>
+        <p1:AssemblyReference>System.ServiceModel.Activities</p1:AssemblyReference>
+        <p1:AssemblyReference>System.ServiceModel.Channels</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Spatial</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Web.DynamicData</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Web.Entity</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Web.ApplicationServices</p1:AssemblyReference>
+        <p1:AssemblyReference>System</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Configuration</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Core</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Data</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Drawing</p1:AssemblyReference>
+        <p1:AssemblyReference>System.EnterpriseServices</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Runtime.Serialization</p1:AssemblyReference>
+        <p1:AssemblyReference>System.ServiceModel</p1:AssemblyReference>
+        <p1:AssemblyReference>System.ServiceModel.Web</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Web</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Web.Extensions</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Web.Services</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Xaml</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Xml</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Xml.Linq</p1:AssemblyReference>
+        <p1:AssemblyReference>WindowsBase</p1:AssemblyReference>
+        <p1:AssemblyReference>BrandAnalytics.Common</p1:AssemblyReference>
+        <p1:AssemblyReference>BrandAnalytics.Database</p1:AssemblyReference>
+        <p1:AssemblyReference>BrandAnalytics.Data</p1:AssemblyReference>
+        <p1:AssemblyReference>mscorlib</p1:AssemblyReference>
+        <p1:AssemblyReference>BrandAnalytics</p1:AssemblyReference>
+      </sco:Collection>
+    </p1:TextExpression.References>
+    <p1:Sequence.Variables>
+      <p1:Variable x:TypeArguments="CorrelationHandle" Name="handle" />
+    </p1:Sequence.Variables>
+    <p1:Sequence sap2010:WorkflowViewState.IdRef="Sequence_5">
+      <p1:Parallel sap2010:WorkflowViewState.IdRef="Parallel_1">
+        <p1:Sequence sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <p1:Sequence.Variables>
+            <p1:Variable x:TypeArguments="x:Int32" Name="ClientId" />
+            <p1:Variable x:TypeArguments="x:String" Name="Brand" />
+            <p1:Variable x:TypeArguments="x:Int32" Name="StudyId" />
+          </p1:Sequence.Variables>
+          <Receive x:Name="__ReferenceID0" CanCreateInstance="True" DisplayName="ReceiveRequest" sap2010:WorkflowViewState.IdRef="Receive_1" OperationName="RequestStudy" ServiceContractName="p:IService">
+            <Receive.CorrelationInitializers>
+              <RequestReplyCorrelationInitializer>
+                <RequestReplyCorrelationInitializer.CorrelationHandle>
+                  <p1:InArgument x:TypeArguments="CorrelationHandle">
+                    <mca:CSharpValue x:TypeArguments="CorrelationHandle">handle</mca:CSharpValue>
+                  </p1:InArgument>
+                </RequestReplyCorrelationInitializer.CorrelationHandle>
+              </RequestReplyCorrelationInitializer>
+            </Receive.CorrelationInitializers>
+            <ReceiveParametersContent>
+              <p1:OutArgument x:TypeArguments="x:Int32" x:Key="ClientId">
+                <mca:CSharpReference x:TypeArguments="x:Int32">ClientId</mca:CSharpReference>
+              </p1:OutArgument>
+              <p1:OutArgument x:TypeArguments="x:String" x:Key="Brand">
+                <mca:CSharpReference x:TypeArguments="x:String">Brand</mca:CSharpReference>
+              </p1:OutArgument>
+            </ReceiveParametersContent>
+          </Receive>
+          <bssc:RequestStudyActivity sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap2010:WorkflowViewState.IdRef="BrandAnalytics.Service.ServiceActivities.ClientService.RequestStudyActivity_1">
+            <bssc:RequestStudyActivity.Brand>
+              <p1:InArgument x:TypeArguments="x:String">
+                <mca:CSharpValue x:TypeArguments="x:String">Brand</mca:CSharpValue>
+              </p1:InArgument>
+            </bssc:RequestStudyActivity.Brand>
+            <bssc:RequestStudyActivity.ClientId>
+              <p1:InArgument x:TypeArguments="x:Int32">
+                <mca:CSharpValue x:TypeArguments="x:Int32">ClientId</mca:CSharpValue>
+              </p1:InArgument>
+            </bssc:RequestStudyActivity.ClientId>
+            <bssc:RequestStudyActivity.StudyId>
+              <p1:OutArgument x:TypeArguments="x:Int32">
+                <mca:CSharpReference x:TypeArguments="x:Int32">StudyId</mca:CSharpReference>
+              </p1:OutArgument>
+            </bssc:RequestStudyActivity.StudyId>
+          </bssc:RequestStudyActivity>
+          <SendReply Request="{x:Reference __ReferenceID0}" DisplayName="SendResponse" sap2010:WorkflowViewState.IdRef="SendReply_1">
+            <SendParametersContent>
+              <p1:InArgument x:TypeArguments="x:Int32" x:Key="StudyId">
+                <mca:CSharpValue x:TypeArguments="x:Int32">StudyId</mca:CSharpValue>
+              </p1:InArgument>
+            </SendParametersContent>
+          </SendReply>
+        </p1:Sequence>
+        <p1:Sequence sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <p1:Sequence.Variables>
+            <p1:Variable x:TypeArguments="x:Int32" Name="StudyId">
+              <p1:Variable.Default>
+                <mca:CSharpValue x:TypeArguments="x:Int32">StudyId</mca:CSharpValue>
+              </p1:Variable.Default>
+            </p1:Variable>
+          </p1:Sequence.Variables>
+          <Receive x:Name="__ReferenceID1" CanCreateInstance="True" DisplayName="ReceiveRequest" sap2010:WorkflowViewState.IdRef="Receive_2" OperationName="CancelStudy" ServiceContractName="p:IService">
+            <Receive.CorrelationInitializers>
+              <RequestReplyCorrelationInitializer>
+                <RequestReplyCorrelationInitializer.CorrelationHandle>
+                  <p1:InArgument x:TypeArguments="CorrelationHandle">
+                    <mca:CSharpValue x:TypeArguments="CorrelationHandle">handle</mca:CSharpValue>
+                  </p1:InArgument>
+                </RequestReplyCorrelationInitializer.CorrelationHandle>
+              </RequestReplyCorrelationInitializer>
+            </Receive.CorrelationInitializers>
+            <ReceiveParametersContent>
+              <p1:OutArgument x:TypeArguments="x:Int32" x:Key="StudyId">
+                <mca:CSharpReference x:TypeArguments="x:Int32">StudyId</mca:CSharpReference>
+              </p1:OutArgument>
+            </ReceiveParametersContent>
+          </Receive>
+          <bssc:CancelStudyActivity sap2010:WorkflowViewState.IdRef="CancelStudyActivity_1">
+            <bssc:CancelStudyActivity.StudyId>
+              <p1:InArgument x:TypeArguments="x:Int32">
+                <mca:CSharpValue x:TypeArguments="x:Int32">StudyId</mca:CSharpValue>
+              </p1:InArgument>
+            </bssc:CancelStudyActivity.StudyId>
+          </bssc:CancelStudyActivity>
+          <SendReply Request="{x:Reference __ReferenceID1}" DisplayName="SendResponse" sap2010:WorkflowViewState.IdRef="SendReply_2">
+            <SendParametersContent>
+              <p1:InArgument x:TypeArguments="x:Int32" x:Key="StudyId">
+                <mca:CSharpValue x:TypeArguments="x:Int32">StudyId</mca:CSharpValue>
+              </p1:InArgument>
+            </SendParametersContent>
+          </SendReply>
+        </p1:Sequence>
+        <p1:Sequence sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <p1:Sequence.Variables>
+            <p1:Variable x:TypeArguments="x:Int32" Name="ClientId" />
+            <p1:Variable x:TypeArguments="bd:TwitterStudyReport[]" Name="Studies" />
+          </p1:Sequence.Variables>
+          <Receive x:Name="__ReferenceID2" CanCreateInstance="True" DisplayName="ReceiveRequest" sap2010:WorkflowViewState.IdRef="Receive_3" OperationName="GetCompletedStudies" ServiceContractName="p:IService">
+            <Receive.CorrelationInitializers>
+              <RequestReplyCorrelationInitializer>
+                <RequestReplyCorrelationInitializer.CorrelationHandle>
+                  <p1:InArgument x:TypeArguments="CorrelationHandle">
+                    <mca:CSharpValue x:TypeArguments="CorrelationHandle">handle</mca:CSharpValue>
+                  </p1:InArgument>
+                </RequestReplyCorrelationInitializer.CorrelationHandle>
+              </RequestReplyCorrelationInitializer>
+            </Receive.CorrelationInitializers>
+            <ReceiveParametersContent>
+              <p1:OutArgument x:TypeArguments="x:Int32" x:Key="ClientId">
+                <mca:CSharpReference x:TypeArguments="x:Int32">ClientId</mca:CSharpReference>
+              </p1:OutArgument>
+            </ReceiveParametersContent>
+          </Receive>
+          <bssc:GetCompletedStudiesActivity sap2010:WorkflowViewState.IdRef="GetCompletedStudiesActivity_1">
+            <bssc:GetCompletedStudiesActivity.ClientId>
+              <p1:InArgument x:TypeArguments="x:Int32">
+                <mca:CSharpValue x:TypeArguments="x:Int32">ClientId</mca:CSharpValue>
+              </p1:InArgument>
+            </bssc:GetCompletedStudiesActivity.ClientId>
+            <bssc:GetCompletedStudiesActivity.Reports>
+              <p1:OutArgument x:TypeArguments="bd:TwitterStudyReport[]">
+                <mca:CSharpReference x:TypeArguments="bd:TwitterStudyReport[]">Studies</mca:CSharpReference>
+              </p1:OutArgument>
+            </bssc:GetCompletedStudiesActivity.Reports>
+          </bssc:GetCompletedStudiesActivity>
+          <SendReply Request="{x:Reference __ReferenceID2}" DisplayName="SendResponse" sap2010:WorkflowViewState.IdRef="SendReply_3">
+            <SendParametersContent>
+              <p1:InArgument x:TypeArguments="bd:TwitterStudyReport[]" x:Key="Studies">
+                <mca:CSharpValue x:TypeArguments="bd:TwitterStudyReport[]">Studies</mca:CSharpValue>
+              </p1:InArgument>
+            </SendParametersContent>
+          </SendReply>
+        </p1:Sequence>
+      </p1:Parallel>
+    </p1:Sequence>
+    <sads:DebugSymbol.Symbol>d3FEOlxGQUNcTEVJQ1xDT1NcdHBcd29ya2luZy1kaXJcY29kZVx3ZWJcQnJhbmRBbmFseXRpY3NcQnJhbmRBbmFseXRpY3MuU2VydmljZVxCcmFuZEFuYWx5dGljc1NlcnZpY2UuQ2xpZW50cy54YW1seCAPA9MBEQEBTAXRARMBAk0H0AEVAQNOCX8XAT2AAQmmARcBJKcBCc8BFwEEVAtmFQFeZwt3JwFOeAt+FwE+hAERhAFVASWIAQuXARUBNpgBC54BJgEynwELpQEXASisAQu7ARUBG7wBC8cBLgESyAELzgEXAQVgEWBeAWljEWNcAWRZFVliAV9vEW9WAVlqEWpUAVR0EXRdAU97EXtVAT+NARWNAWIBOpQBEZQBXQE3mwERmwFVATOiARGiAVUBKbgBEbgBXgEgsQEVsQFiARy/ARG/AVYBF8QBEcQBbQETywERywFlAQ4=</sads:DebugSymbol.Symbol>
+  </p1:Sequence>
+  <sap2010:WorkflowViewState.ViewStateManager>
+    <sap2010:ViewStateManager>
+      <sap2010:ViewStateData Id="Receive_1" sap:VirtualizedContainerService.HintSize="255,86" />
+      <sap2010:ViewStateData Id="BrandAnalytics.Service.ServiceActivities.ClientService.RequestStudyActivity_1" sap:VirtualizedContainerService.HintSize="255,22" />
+      <sap2010:ViewStateData Id="SendReply_1" sap:VirtualizedContainerService.HintSize="255,86" />
+      <sap2010:ViewStateData Id="Sequence_2" sap:VirtualizedContainerService.HintSize="277,398">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Receive_2" sap:VirtualizedContainerService.HintSize="255,86" />
+      <sap2010:ViewStateData Id="CancelStudyActivity_1" sap:VirtualizedContainerService.HintSize="255,22" />
+      <sap2010:ViewStateData Id="SendReply_2" sap:VirtualizedContainerService.HintSize="255,86" />
+      <sap2010:ViewStateData Id="Sequence_3" sap:VirtualizedContainerService.HintSize="277,398">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Receive_3" sap:VirtualizedContainerService.HintSize="255,86" />
+      <sap2010:ViewStateData Id="GetCompletedStudiesActivity_1" sap:VirtualizedContainerService.HintSize="255,22" />
+      <sap2010:ViewStateData Id="SendReply_3" sap:VirtualizedContainerService.HintSize="255,86" />
+      <sap2010:ViewStateData Id="Sequence_4" sap:VirtualizedContainerService.HintSize="277,398">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Parallel_1" sap:VirtualizedContainerService.HintSize="1025,444" />
+      <sap2010:ViewStateData Id="Sequence_5" sap:VirtualizedContainerService.HintSize="1047,568">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="1069,692">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WorkflowService_1" sap:VirtualizedContainerService.HintSize="1099,762" />
+    </sap2010:ViewStateManager>
+  </sap2010:WorkflowViewState.ViewStateManager>
+</WorkflowService>

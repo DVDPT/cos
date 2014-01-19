@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scn:Scenario xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:scn="http://www.pi4soa.org/scenario" name="CancelUnexistentStudy" description="desc" author="me" choreographyDescriptionURL="Client.cdm"/>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<scenario xmlns="http://www.savara.org/scenario">
+    <role id="78970908-692b-4a0a-99ab-17e49747f003" name="Client"/>
+    <role id="3e767373-aab6-4d0d-9411-0bbaf86d08b6" name="BrandAnalytics"/>
+    <role id="73b3e892-570b-4038-a447-fcdc2262f320" name="Employee"/>
+    <event xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SendEvent" operationName="requestStudy" role="78970908-692b-4a0a-99ab-17e49747f003" id="51288e41-3612-495d-89e9-41b8aa2999a3">
+        <parameter type="{http://www.example.org/ClientSchema}RequestStudy" value="../Messages/RequestStudy.xml"/>
+    </event>
+    <event xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReceiveEvent" operationName="RequestStudy" role="3e767373-aab6-4d0d-9411-0bbaf86d08b6" id="b4a8f043-ab2b-4057-98ad-da16118b6402"/>
+    <event xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SendEvent" operationName="requestStudy" role="3e767373-aab6-4d0d-9411-0bbaf86d08b6" id="ede1cc57-4330-453e-a4d3-c92a6aa783c8">
+        <parameter type="{http://www.example.org/ClientSchema}RequestStudyResponse" value="../Messages/RequestStudyResponse.xml"/>
+    </event>
+    <event xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReceiveEvent" operationName="requestStudy" role="78970908-692b-4a0a-99ab-17e49747f003" id="c6217203-0863-407f-bc60-3674389ab04b">
+        <parameter type="{http://www.example.org/ClientSchema}RequestStudyResponse" value="../Messages/RequestStudyResponse.xml"/>
+    </event>
+    <event xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SendEvent" operationName="getPendingStudies" role="73b3e892-570b-4038-a447-fcdc2262f320" id="9ffa0cad-0310-4879-ba16-e13eeb6c0082">
+        <parameter type="{http://www.example.org/ClientSchema}GetPendingStudies" value="../Messages/GetPendingStudies.xml"/>
+    </event>
+    <event xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReceiveEvent" operationName="getPendingStudies" role="3e767373-aab6-4d0d-9411-0bbaf86d08b6" id="2e88236c-568a-442c-980f-6822ce3dbcd4">
+        <parameter type="{http://www.example.org/ClientSchema}GetPendingStudies" value="../Messages/GetPendingStudies.xml"/>
+    </event>
+    <event xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SendEvent" operationName="getPendingStudies" role="3e767373-aab6-4d0d-9411-0bbaf86d08b6" id="e52c04f6-d6fc-46fd-9bf9-89acfa3e2ae1">
+        <parameter type="{http://www.example.org/ClientSchema}GetPendingStudiesResponse" value="../Messages/GetPendingStudiesResponse.xml"/>
+    </event>
+    <event xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReceiveEvent" operationName="getPendingStudies" role="73b3e892-570b-4038-a447-fcdc2262f320" id="0fedff98-430e-4fc0-ba86-2d0b08455f51">
+        <parameter type="{http://www.example.org/ClientSchema}GetPendingStudiesResponse" value="../Messages/GetPendingStudiesResponse.xml"/>
+    </event>
+    <event xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SendEvent" operationName="StartStudy" role="73b3e892-570b-4038-a447-fcdc2262f320" id="b2279726-e81d-4be9-9e46-b8ff6f3dc728">
+        <parameter type="StartStudy" value="../Messages/StartStudy.xml"/>
+    </event>
+    <event xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReceiveEvent" operationName="StartStudy" role="3e767373-aab6-4d0d-9411-0bbaf86d08b6" id="f8f9ca58-f090-4506-b1f8-5524cc2cf8e0">
+        <parameter type="StartStudy" value="../Messages/StartStudy.xml"/>
+    </event>
+    <event xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SendEvent" operationName="StartStudy" role="3e767373-aab6-4d0d-9411-0bbaf86d08b6" id="ae044c0b-e286-48db-a075-9d6cdefc4581">
+        <parameter type="StartStudyResponse" value="../Messages/StartStudyResponse.xml"/>
+    </event>
+    <event xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReceiveEvent" operationName="StartStudy" role="73b3e892-570b-4038-a447-fcdc2262f320" id="f25cc623-df11-42e1-a379-665748bdc306">
+        <parameter type="StartStudyResponse" value="../Messages/StartStudyResponse.xml"/>
+    </event>
+    <event xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SendEvent" operationName="ConfirmStudy" role="73b3e892-570b-4038-a447-fcdc2262f320" id="86939cee-6400-47c9-bd95-cb26e0b1357c">
+        <parameter type="ConfirmStudy" value="../Messages/ConfirmStudy.xml"/>
+    </event>
+    <event xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReceiveEvent" operationName="ConfirmStudy" role="3e767373-aab6-4d0d-9411-0bbaf86d08b6" id="93711323-9600-435c-b2b1-eea2ba75f13b">
+        <parameter type="ConfirmStudy" value="../Messages/ConfirmStudy.xml"/>
+    </event>
+    <event xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SendEvent" role="3e767373-aab6-4d0d-9411-0bbaf86d08b6" id="3eefb774-052e-494a-9025-20d5464eef1e"/>
+    <event xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReceiveEvent" role="73b3e892-570b-4038-a447-fcdc2262f320" id="80ca2783-3122-473b-8ea1-5449a7980fe8"/>
+    <link source="51288e41-3612-495d-89e9-41b8aa2999a3" target="b4a8f043-ab2b-4057-98ad-da16118b6402"/>
+    <link source="9ffa0cad-0310-4879-ba16-e13eeb6c0082" target="2e88236c-568a-442c-980f-6822ce3dbcd4"/>
+    <link source="ede1cc57-4330-453e-a4d3-c92a6aa783c8" target="c6217203-0863-407f-bc60-3674389ab04b"/>
+    <link source="e52c04f6-d6fc-46fd-9bf9-89acfa3e2ae1" target="0fedff98-430e-4fc0-ba86-2d0b08455f51"/>
+    <link source="b2279726-e81d-4be9-9e46-b8ff6f3dc728" target="f8f9ca58-f090-4506-b1f8-5524cc2cf8e0"/>
+    <link source="ae044c0b-e286-48db-a075-9d6cdefc4581" target="f25cc623-df11-42e1-a379-665748bdc306"/>
+    <link source="86939cee-6400-47c9-bd95-cb26e0b1357c" target="93711323-9600-435c-b2b1-eea2ba75f13b"/>
+    <link source="3eefb774-052e-494a-9025-20d5464eef1e" target="80ca2783-3122-473b-8ea1-5449a7980fe8"/>
+</scenario>

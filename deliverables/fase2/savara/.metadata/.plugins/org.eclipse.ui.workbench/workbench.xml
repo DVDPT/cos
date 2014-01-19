@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workbench progressCount="20" version="2.0">
+<workbenchAdvisor/>
+<window height="768" maximized="true" width="1024" x="176" y="37">
+<fastViewData fastViewLocation="1024"/>
+<perspectiveBar>
+<itemSize x="160"/>
+</perspectiveBar>
+<coolbarLayout>
+<coolItem id="group.file" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="122" y="22"/>
+<coolItem id="additions" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="53" y="22"/>
+<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="76" y="22"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="61" y="22"/>
+<coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="61" y="22"/>
+<coolItem id="group.nav" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="190" y="22"/>
+<coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.savara.tools.scenario.designer.ScenarioDesignerID" itemType="typeToolBarContribution" x="256" y="22"/>
+<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.pi4soa.scenario.designer.Pi4SOAScenarioDesignerID" itemType="typeToolBarContribution" x="256" y="22"/>
+<coolItem id="org.pi4soa.designer.Pi4SOADesignerID" itemType="typeToolBarContribution" x="210" y="22"/>
+<coolItem id="org.eclipse.wst.xsd.ui.internal.editor.InternalXSDMultiPageEditor" itemType="typeToolBarContribution" x="104" y="22"/>
+<coolItem id="group.help" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
+</coolbarLayout>
+<page aggregateWorkingSetId="Aggregate for window 1389365365400" focus="true" label="COS - Choreography">
+<editors>
+<editorArea activeWorkbook="DefaultEditorWorkbook">
+<info part="DefaultEditorWorkbook">
+<folder appearance="1" expanded="2">
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
+</presentation>
+</folder>
+</info>
+</editorArea>
+<editor id="org.pi4soa.designer.Pi4SOADesignerID" name="Client.cdm" partName="Client.cdm" path="D:/FAC/LEIC/COS/tp/working-dir/code/savara/COS/Client.cdm" title="Client.cdm" tooltip="COS/Client.cdm" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/COS/Client.cdm"/>
+</editor>
+<editor id="org.savara.tools.scenario.designer.ScenarioDesignerID" name="Cancel.scn" partName="Cancel.scn" path="D:/FAC/LEIC/COS/tp/working-dir/code/savara/COS/Cancel.scn" title="Cancel.scn" tooltip="COS/Cancel.scn" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/COS/Cancel.scn"/>
+</editor>
+<editor id="org.eclipse.wst.xsd.ui.internal.editor.InternalXSDMultiPageEditor" name="ClientSchema.xsd" partName="ClientSchema.xsd" path="D:/FAC/LEIC/COS/tp/working-dir/code/savara/COS/ClientSchema.xsd" title="ClientSchema.xsd" tooltip="COS/ClientSchema.xsd" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/COS/ClientSchema.xsd"/>
+</editor>
+<editor id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="RequestStudy.xml" partName="RequestStudy.xml" path="D:/FAC/LEIC/COS/tp/working-dir/code/savara/COS/Messages/RequestStudy.xml" title="RequestStudy.xml" tooltip="COS/Messages/RequestStudy.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/COS/Messages/RequestStudy.xml"/>
+</editor>
+<editor activePart="true" focus="true" id="org.pi4soa.scenario.designer.Pi4SOAScenarioDesignerID" name="My1.scn" partName="My1.scn" path="D:/FAC/LEIC/COS/tp/working-dir/code/savara/COS/My1.scn" title="My1.scn" tooltip="COS/My1.scn" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/COS/My1.scn"/>
+</editor>
+</editors>
+<views>
+<view id="org.eclipse.ui.views.PropertySheet" partName="Properties">
+<viewState/>
+</view>
+<view id="org.eclipse.ui.views.ResourceNavigator" partName="Navigator">
+<viewState LINK_NAVIGATOR_TO_EDITOR="1" sorter="1">
+<filters>
+<filter element="*.class" isEnabled="false"/>
+<filter element="RemoteSystemsConnections" isEnabled="true"/>
+<filter element="RemoteSystemsTempFiles" isEnabled="true"/>
+<filter element=".*" isEnabled="false"/>
+</filters>
+<currentFrame>
+<frameInput factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
+<expanded>
+<element factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/COS" type="4"/>
+</expanded>
+<selection>
+<element factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/COS/Messages" type="2"/>
+</selection>
+</currentFrame>
+</viewState>
+</view>
+<view id="org.eclipse.ui.views.ProblemView" partName="Problems">
+<viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
+<expanded>
+<category IMemento.internal.id="Warnings"/>
+<category IMemento.internal.id="Errors"/>
+</expanded>
+<columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="689"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.locationField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
+</viewState>
+</view>
+<view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
+<viewState/>
+</view>
+</views>
+<perspectives activePart="org.pi4soa.scenario.designer.Pi4SOAScenarioDesignerID" activePerspective="org.pi4soa.designer.perspective">
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="org.pi4soa.designer.editor.SOAPerspective" id="org.pi4soa.designer.perspective" label="Choreography"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.context.ui.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.doc.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.tasks.ui.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.rse.core.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="org.eclipse.help.internal.ui.HelpActionSet"/>
+<hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
+<hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
+<view id="org.eclipse.ui.views.ResourceNavigator"/>
+<view id="org.eclipse.ui.views.PropertySheet"/>
+<view id="org.eclipse.ui.views.ProblemView"/>
+<view id="org.eclipse.ui.views.ContentOutline"/>
+<fastViewBars/>
+<layout>
+<mainWindow>
+<info folder="true" part="topLeft">
+<folder activePageID="org.eclipse.ui.views.ResourceNavigator" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ResourceNavigator" label="Navigator"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="750" ratioRight="250" relationship="2" relative="topLeft">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.25" ratioLeft="250" ratioRight="750" relationship="2" relative="topLeft"/>
+<info folder="true" part="bottomRight" ratio="0.74650913" ratioLeft="695" ratioRight="236" relationship="4" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.eclipse.ui.views.ProblemView" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.PropertySheet" label="Properties"/>
+<page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="bottomLeft" ratio="0.74922603" ratioLeft="484" ratioRight="162" relationship="4" relative="topLeft">
+<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
+</perspectives>
+<workingSets/>
+<navigationHistory>
+<editors>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.pi4soa.designer.Pi4SOADesignerID" path="/COS/Client.cdm"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/COS/ClientSchema.xsd"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xsd.ui.internal.editor.InternalXSDMultiPageEditor" path="/COS/ClientSchema.xsd"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.savara.tools.scenario.designer.ScenarioDesignerID" path="/COS/Cancel.scn"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/COS/Cancel.simulation"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/COS/ClientSchema.xsd"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xsd.ui.internal.editor.InternalXSDMultiPageEditor" path="/COS/ClientSchema.xsd"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.pi4soa.designer.Pi4SOADesignerID" path="/COS/My.cdm"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.savara.tools.scenario.designer.ScenarioDesignerID" path="/COS/Cancel.scn"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" path="/COS/Messages/RequestStudy.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/COS/Messages/RequestStudy.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.savara.tools.scenario.designer.ScenarioDesignerID" path="/COS/My.scn"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.pi4soa.scenario.designer.Pi4SOAScenarioDesignerID" path="/COS/My1.scn"/>
+</editors>
+<item historyLabel="ClientSchema.xsd" index="2">
+<position path=""/>
+</item>
+<item historyLabel="ClientSchema.xsd" index="1">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="ClientSchema.xsd" index="2">
+<position path=""/>
+</item>
+<item historyLabel="Cancel.scn" index="3"/>
+<item historyLabel="Client.cdm" index="0"/>
+<item historyLabel="Cancel.scn" index="3"/>
+<item historyLabel="Client.cdm" index="0"/>
+<item historyLabel="Cancel.simulation" index="4">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Client.cdm" index="0"/>
+<item historyLabel="ClientSchema.xsd" index="5">
+<position/>
+</item>
+<item historyLabel="Client.cdm" index="0"/>
+<item historyLabel="ClientSchema.xsd" index="5">
+<position/>
+</item>
+<item historyLabel="Client.cdm" index="0"/>
+<item historyLabel="ClientSchema.xsd" index="5">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Client.cdm" index="0"/>
+<item historyLabel="ClientSchema.xsd" index="6">
+<position path=""/>
+</item>
+<item historyLabel="ClientSchema.xsd" index="6">
+<position path="type[@name=&apos;NewSimpleType&apos;]"/>
+</item>
+<item historyLabel="ClientSchema.xsd" index="6">
+<position path=""/>
+</item>
+<item historyLabel="Client.cdm" index="0"/>
+<item historyLabel="ClientSchema.xsd" index="6">
+<position path=""/>
+</item>
+<item historyLabel="Client.cdm" index="0"/>
+<item historyLabel="My.cdm" index="7"/>
+<item historyLabel="Client.cdm" index="0"/>
+<item historyLabel="My.cdm" index="7"/>
+<item historyLabel="Client.cdm" index="0"/>
+<item historyLabel="My.cdm" index="7"/>
+<item historyLabel="Client.cdm" index="0"/>
+<item historyLabel="My.cdm" index="7"/>
+<item historyLabel="Client.cdm" index="0"/>
+<item historyLabel="Cancel.scn" index="8"/>
+<item historyLabel="Client.cdm" index="0"/>
+<item historyLabel="Cancel.scn" index="8"/>
+<item historyLabel="My.cdm" index="7"/>
+<item historyLabel="Cancel.scn" index="8"/>
+<item historyLabel="Client.cdm" index="0"/>
+<item historyLabel="Cancel.scn" index="8"/>
+<item historyLabel="ClientSchema.xsd" index="6">
+<position path=""/>
+</item>
+<item historyLabel="Cancel.scn" index="8"/>
+<item historyLabel="RequestStudy.xml" index="9">
+<position info="not_deleted" x="238" y="16"/>
+</item>
+<item historyLabel="RequestStudy.xml" index="10">
+<position info="not_deleted" x="240" y="0"/>
+</item>
+<item historyLabel="RequestStudy.xml" index="9">
+<position info="not_deleted" x="238" y="18"/>
+</item>
+<item historyLabel="Cancel.scn" index="8"/>
+<item historyLabel="My.scn" index="11"/>
+<item historyLabel="Cancel.scn" index="8"/>
+<item historyLabel="My1.scn" index="12"/>
+<item historyLabel="Cancel.scn" index="8"/>
+<item historyLabel="Client.cdm" index="0"/>
+<item historyLabel="My1.scn" index="12"/>
+<item historyLabel="Client.cdm" index="0"/>
+<item active="true" historyLabel="My1.scn" index="12"/>
+</navigationHistory>
+<input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/COS" type="4"/>
+</page>
+<workbenchWindowAdvisor/>
+<actionBarAdvisor/>
+<trimLayout>
+<trimArea IMemento.internal.id="128">
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
+<trimItem IMemento.internal.id="org.eclipse.mylyn.tasks.ui.trim.container"/>
+</trimArea>
+<trimArea IMemento.internal.id="1024">
+<trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
+<trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
+</trimArea>
+</trimLayout>
+</window>
+<mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.pi4soa.scenario.designer.Pi4SOAScenarioDesignerID" name="My1.scn" tooltip="COS/My1.scn">
+<persistable path="/COS/My1.scn"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.savara.tools.scenario.designer.ScenarioDesignerID" name="My.scn" tooltip="COS/My.scn">
+<persistable path="/COS/My.scn"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="RequestStudy.xml" tooltip="COS/Messages/RequestStudy.xml">
+<persistable path="/COS/Messages/RequestStudy.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.pi4soa.designer.Pi4SOADesignerID" name="My.cdm" tooltip="COS/My.cdm">
+<persistable path="/COS/My.cdm"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xsd.ui.internal.editor.InternalXSDMultiPageEditor" name="ClientSchema.xsd" tooltip="COS/ClientSchema.xsd">
+<persistable path="/COS/ClientSchema.xsd"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="Cancel.simulation" tooltip="COS/Cancel.simulation">
+<persistable path="/COS/Cancel.simulation"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.savara.tools.scenario.designer.ScenarioDesignerID" name="Cancel.scn" tooltip="COS/Cancel.scn">
+<persistable path="/COS/Cancel.scn"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.pi4soa.designer.Pi4SOADesignerID" name="Client.cdm" tooltip="COS/Client.cdm">
+<persistable path="/COS/Client.cdm"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.pi4soa.designer.Pi4SOADesignerID" name="StudyChor.cdm" tooltip="COS/StudyChor.cdm">
+<persistable path="/COS/StudyChor.cdm"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.pi4soa.scenario.designer.Pi4SOAScenarioDesignerID" name="Success.scn" tooltip="COS/Success.scn">
+<persistable path="/COS/Success.scn"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="GetPendingStudiesResponse.xml" tooltip="COS/Messages/GetPendingStudiesResponse.xml">
+<persistable path="/COS/Messages/GetPendingStudiesResponse.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="StartStudyResponse.xml" tooltip="COS/Messages/StartStudyResponse.xml">
+<persistable path="/COS/Messages/StartStudyResponse.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="NewFile.xml" tooltip="COS/Messages/NewFile.xml">
+<persistable path="/COS/Messages/NewFile.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="SetStudyAsCompletedResponse.xml" tooltip="COS/Messages/SetStudyAsCompletedResponse.xml">
+<persistable path="/COS/Messages/SetStudyAsCompletedResponse.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="CancelStudy.xml" tooltip="COS/Messages/CancelStudy.xml">
+<persistable path="/COS/Messages/CancelStudy.xml"/>
+</file>
+</mruList>
+</workbench>

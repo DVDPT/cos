@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.savara.tools.scenario.designer.simulate.ScenarioSimulationLauncher">
+<stringAttribute key="execute_services" value="C:\Users\rnunes\AppData\Local\Temp\savara4175683207702220906.simulation"/>
+<stringAttribute key="project" value="COS"/>
+<stringAttribute key="scenario" value="Cancel.scn"/>
+</launchConfiguration>

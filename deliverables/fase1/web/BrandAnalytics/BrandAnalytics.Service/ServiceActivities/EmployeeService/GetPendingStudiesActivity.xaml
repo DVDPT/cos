@@ -1,0 +1,112 @@
+﻿<Activity mc:Ignorable="sap sap2010 sads" x:Class="BrandAnalytics.Service.ServiceActivities.EmployeeService.GetPendingStudiesActivity"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:bd="clr-namespace:BrandAnalytics.Data;assembly=BrandAnalytics.Data"
+ xmlns:local="clr-namespace:BrandAnalytics.Service.Common"
+ xmlns:local1="clr-namespace:BrandAnalytics.Service.ServiceActivities.EmployeeService"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities"
+ xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+ xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="employeeId" Type="InArgument(x:Int32)" />
+    <x:Property Name="studies" Type="OutArgument(bd:TwitterStudy[])" />
+  </x:Members>
+  <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
+  <sap2010:WorkflowViewState.IdRef>BrandAnalytics.Service.ServiceActivities.EmployeeService.GetPendingStudiesActivity_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>BrandAnalytics.Data</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>System.Web.DynamicData</AssemblyReference>
+      <AssemblyReference>System.Web.Entity</AssemblyReference>
+      <AssemblyReference>System.Web.ApplicationServices</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Configuration</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.EnterpriseServices</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Web</AssemblyReference>
+      <AssemblyReference>System.Web</AssemblyReference>
+      <AssemblyReference>System.Web.Extensions</AssemblyReference>
+      <AssemblyReference>System.Web.Services</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>Microsoft.WindowsAzure.Diagnostics</AssemblyReference>
+      <AssemblyReference>Microsoft.WindowsAzure.ServiceRuntime</AssemblyReference>
+      <AssemblyReference>System.Spatial</AssemblyReference>
+      <AssemblyReference>Microsoft.Data.Edm</AssemblyReference>
+      <AssemblyReference>Microsoft.Data.OData</AssemblyReference>
+      <AssemblyReference>Microsoft.WindowsAzure.Configuration</AssemblyReference>
+      <AssemblyReference>Microsoft.WindowsAzure.Storage</AssemblyReference>
+      <AssemblyReference>System.Data.Services.Client</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Channels</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>BrandAnalytics.Data</AssemblyReference>
+      <AssemblyReference>BrandAnalytics.Database</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>BrandAnalytics</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="bd:Employee" Name="mEmployee" />
+    </Sequence.Variables>
+    <local:GetEmployeeActivity sap2010:WorkflowViewState.IdRef="GetEmployeeActivity_1">
+      <local:GetEmployeeActivity.Employee>
+        <OutArgument x:TypeArguments="bd:Employee">
+          <mca:CSharpReference x:TypeArguments="bd:Employee">mEmployee</mca:CSharpReference>
+        </OutArgument>
+      </local:GetEmployeeActivity.Employee>
+      <local:GetEmployeeActivity.EmployeeId>
+        <InArgument x:TypeArguments="x:Int32">
+          <mca:CSharpValue x:TypeArguments="x:Int32">employeeId</mca:CSharpValue>
+        </InArgument>
+      </local:GetEmployeeActivity.EmployeeId>
+    </local:GetEmployeeActivity>
+    <local1:GetEmployeeStudies sap2010:WorkflowViewState.IdRef="GetEmployeeStudies_1">
+      <local1:GetEmployeeStudies.Employee>
+        <InArgument x:TypeArguments="bd:Employee">
+          <mca:CSharpValue x:TypeArguments="bd:Employee">mEmployee</mca:CSharpValue>
+        </InArgument>
+      </local1:GetEmployeeStudies.Employee>
+      <local1:GetEmployeeStudies.Studies>
+        <OutArgument x:TypeArguments="bd:TwitterStudy[]">
+          <mca:CSharpReference x:TypeArguments="bd:TwitterStudy[]">studies</mca:CSharpReference>
+        </OutArgument>
+      </local1:GetEmployeeStudies.Studies>
+    </local1:GetEmployeeStudies>
+    <sads:DebugSymbol.Symbol>d44BRDpcRkFDXExFSUNcQ09TXHRwXHdvcmtpbmctZGlyXGNvZGVcd2ViXEJyYW5kQW5hbHl0aWNzXEJyYW5kQW5hbHl0aWNzLlNlcnZpY2VcU2VydmljZUFjdGl2aXRpZXNcRW1wbG95ZWVTZXJ2aWNlXEdldFBlbmRpbmdTdHVkaWVzQWN0aXZpdHkueGFtbAdEA2EOAgEBSAVTIQIBC1QFXyECAQJLC0tdAgEQUAtQUgIBDFcLV1UCAQdcC1xhAgED</sads:DebugSymbol.Symbol>
+  </Sequence>
+  <sap2010:WorkflowViewState.ViewStateManager>
+    <sap2010:ViewStateManager>
+      <sap2010:ViewStateData Id="GetEmployeeActivity_1" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="GetEmployeeStudies_1" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="222,208">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="BrandAnalytics.Service.ServiceActivities.EmployeeService.GetPendingStudiesActivity_1" sap:VirtualizedContainerService.HintSize="262,288" />
+    </sap2010:ViewStateManager>
+  </sap2010:WorkflowViewState.ViewStateManager>
+</Activity>
